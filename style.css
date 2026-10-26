@@ -1,0 +1,832 @@
+/* ========================================
+STYLE GÉNÉRAL
+======================================== */
+
+* {
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+background: #f0f5f7;
+color: #243447;
+line-height: 1.6;
+}
+
+/* ========================================
+EN-TÊTE
+======================================== */
+
+header {
+text-align: center;
+padding: 35px 20px;
+background: linear-gradient(135deg, #075e65, #138a83);
+color: white;
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+margin: 0;
+font-size: 30px;
+letter-spacing: 0.5px;
+}
+
+header p {
+margin: 10px 0 0;
+font-size: 15px;
+color: #e0f5f3;
+}
+
+/* ========================================
+CONTENU PRINCIPAL
+======================================== */
+
+main {
+width: min(900px, 100%);
+margin: 35px auto;
+padding: 0 20px 40px;
+}
+
+/* ========================================
+BARRE DE RECHERCHE
+======================================== */
+
+#search {
+display: block;
+width: 100%;
+padding: 17px 20px;
+border: 2px solid #d6e3e7;
+border-radius: 12px;
+background: white;
+color: #243447;
+font-size: 16px;
+outline: none;
+box-shadow: 0 4px 15px rgba(22, 63, 75, 0.05);
+transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#search::placeholder {
+color: #81939d;
+}
+
+#search:focus {
+border-color: #138a83;
+box-shadow: 0 0 0 4px rgba(19, 138, 131, 0.12);
+}
+
+/* ========================================
+ZONE DES RÉSULTATS
+======================================== */
+
+#results {
+margin-top: 25px;
+padding: 0;
+background: transparent;
+}
+
+/* ========================================
+FICHES MÉDICALES
+======================================== */
+
+#results article {
+margin-bottom: 20px;
+padding: 25px;
+background: white;
+border: 1px solid #e0e9ec;
+border-left: 5px solid #138a83;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(22, 63, 75, 0.06);
+overflow-wrap: anywhere;
+}
+
+#results article h2 {
+margin: 0 0 18px;
+padding-bottom: 12px;
+border-bottom: 1px solid #e8eff1;
+color: #075e65;
+font-size: 23px;
+}
+
+#results article p {
+margin: 12px 0;
+}
+
+#results article strong {
+color: #344f60;
+}
+
+/* ========================================
+AVERTISSEMENT : FICHE INCOMPLÈTE
+======================================== */
+
+#results article .fiche-incomplete {
+margin-top: 15px;
+padding: 10px 14px;
+border: 1px solid #f1d28b;
+border-radius: 8px;
+background: #fff7df;
+color: #815b08;
+font-size: 14px;
+font-weight: bold;
+}
+
+/* ========================================
+PETITS ÉCRANS
+======================================== */
+
+@media (max-width: 600px) {
+header {
+padding: 28px 15px;
+}
+
+
+header h1 {
+    font-size: 24px;
+}
+
+main {
+    margin-top: 22px;
+    padding-right: 14px;
+    padding-left: 14px;
+}
+
+#results article {
+    padding: 18px;
+}
+
+#results article h2 {
+    font-size: 20px;
+}
+
+
+}
+
+/* ========================================
+EN-TÊTE ET LOGO
+======================================== */
+
+.header-content {
+max-width: 900px;
+margin: 0 auto;
+}
+
+.logo {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 48px;
+height: 48px;
+margin-bottom: 10px;
+border: 2px solid rgba(255, 255, 255, 0.7);
+border-radius: 14px;
+font-size: 28px;
+}
+
+/* ========================================
+MESSAGE DE BIENVENUE
+======================================== */
+
+.welcome {
+margin-bottom: 25px;
+}
+
+.welcome h2 {
+margin-bottom: 8px;
+color: #075e65;
+}
+
+.welcome p {
+color: #607580;
+}
+
+/* ========================================
+MENU DES CATÉGORIES
+======================================== */
+
+.categories {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-bottom: 28px;
+}
+
+.category-button {
+padding: 10px 16px;
+border: 1px solid #d6e3e7;
+border-radius: 25px;
+background: white;
+color: #344f60;
+font-size: 14px;
+cursor: pointer;
+transition: background 0.2s, color 0.2s;
+}
+
+.category-button:hover,
+.category-button.active {
+border-color: #075e65;
+background: #075e65;
+color: white;
+}
+
+/* ========================================
+RECHERCHE
+======================================== */
+
+.search-section {
+margin-bottom: 25px;
+}
+
+.search-section label {
+display: block;
+margin-bottom: 10px;
+color: #075e65;
+font-weight: bold;
+}
+
+.search-help {
+margin-top: 8px;
+color: #70838c;
+font-size: 13px;
+}
+
+/* ========================================
+PIED DE PAGE
+======================================== */
+
+footer {
+padding: 25px 20px;
+background: #e4eef0;
+color: #607580;
+text-align: center;
+font-size: 13px;
+}
+
+footer p {
+margin: 5px 0;
+}
+
+/* ========================================
+PETITS ÉCRANS
+======================================== */
+
+@media (max-width: 600px) {
+.categories {
+gap: 8px;
+}
+
+
+.category-button {
+    padding: 9px 12px;
+    font-size: 13px;
+}
+
+.welcome h2 {
+    font-size: 21px;
+}
+
+
+}
+css
+/* ========================================
+   MENU DÉROULANT DES CATÉGORIES MÉDICALES
+======================================== */
+
+.categories-dropdown {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 20px 0;
+}
+
+.categories-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #d5e2e8;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #17465e;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.categories-toggle:hover {
+    background: #f0f7fa;
+    border-color: #8bb8ca;
+}
+
+.categories-toggle:focus-visible {
+    outline: 2px solid #287d9b;
+    outline-offset: 3px;
+}
+
+#categories-arrow {
+    transition: transform 0.2s ease;
+}
+
+.categories-dropdown.open #categories-arrow {
+    transform: rotate(180deg);
+}
+
+#categories.categories {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 8px;
+    border: 1px solid #d5e2e8;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(20, 55, 70, 0.12);
+}
+
+#categories.categories[hidden] {
+    display: none;
+}
+
+#categories .category-button {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #294c5c;
+    text-align: left;
+    cursor: pointer;
+}
+
+#categories .category-button:hover {
+    background: #eef6f8;
+}
+
+#categories .category-button.active {
+    background: #dceef4;
+    color: #17465e;
+    font-weight: 700;
+}
+
+/* ========================================
+   DICMED — DESIGN MÉDICAL MODERNE
+   ======================================== */
+
+:root {
+    --couleur-principale: #087f8c;
+    --couleur-principale-foncee: #066570;
+    --couleur-fond: #f3f8fa;
+    --couleur-carte: #ffffff;
+    --couleur-texte: #20343d;
+    --couleur-secondaire: #607781;
+    --couleur-bordure: #dce8ec;
+    --ombre-carte: 0 4px 16px rgba(24, 67, 78, 0.07);
+}
+
+/* Apparence générale */
+body {
+    background: var(--couleur-fond);
+    color: var(--couleur-texte);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* Titres */
+h1,
+h2,
+h3 {
+    color: var(--couleur-principale-foncee);
+    line-height: 1.3;
+}
+
+/* Barre de recherche */
+#search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 18px;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 14px;
+    background: var(--couleur-carte);
+    color: var(--couleur-texte);
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#search:focus {
+    outline: none;
+    border-color: var(--couleur-principale);
+    box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.13);
+}
+
+/* Résultats de recherche */
+#results {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+css
+/* Boutons des termes médicaux */
+.terme-resultat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 18px;
+    margin: 8px 0;
+    border: 1px solid #dce8ec;
+    border-left: 4px solid #087f8c;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #17465e;
+    font: inherit;
+    font-weight: 600;
+    text-align: left;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 50, 60, 0.06);
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+/* Flèche à droite */
+.terme-resultat::after {
+    content: "›";
+    flex-shrink: 0;
+    margin-left: 12px;
+    color: #087f8c;
+    font-size: 24px;
+}
+
+/* Survol */
+.terme-resultat:hover {
+    border-color: #087f8c;
+    background: #f3f8fa;
+}
+
+/* Navigation au clavier */
+.terme-resultat:focus-visible {
+    outline: 3px solid #9bd9df;
+    outline-offset: 2px;
+}
+
+
+
+/* Fiche médicale complète */
+#results article {
+    padding: 22px;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 16px;
+    background: var(--couleur-carte);
+    box-shadow: var(--ombre-carte);
+    overflow-wrap: anywhere;
+}
+
+#results article h2 {
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #d9eff0;
+    font-size: 25px;
+}
+
+/* Rubriques des fiches */
+#results article p {
+    margin: 14px 0;
+}
+
+#results article p strong {
+    color: var(--couleur-principale-foncee);
+}
+
+css
+/* Bouton de retour aux résultats */
+.bouton-retour {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    padding: 11px 18px;
+    margin-bottom: 18px;
+    border: 1px solid #087f8c;
+    border-radius: 8px;
+    background: #087f8c;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.bouton-retour:hover {
+    background: #066570;
+    transform: translateY(-1px);
+}
+
+.bouton-retour:focus-visible {
+    outline: 3px solid #9bd9df;
+    outline-offset: 3px;
+}
+
+
+
+/* Adaptation aux petits écrans */
+@media (max-width: 600px) {
+    #results article {
+        padding: 16px;
+    }
+
+    #results article h2 {
+        font-size: 21px;
+    }
+
+    .terme-resultat {
+        padding: 14px;
+    }
+}
+/* ========================================
+DICMED — PAGE D'ACCUEIL
+======================================== */
+
+.welcome {
+margin: 28px 0;
+padding: 32px;
+border: 1px solid var(--couleur-bordure);
+border-radius: 20px;
+background: linear-gradient(135deg, #ffffff, #eaf7f8);
+box-shadow: var(--ombre-carte);
+}
+
+.welcome-label {
+margin-bottom: 10px;
+color: var(--couleur-principale);
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 1.5px;
+}
+
+.welcome h2 {
+max-width: 650px;
+margin: 0 0 14px;
+color: var(--couleur-principale-foncee);
+font-size: clamp(28px, 4vw, 42px);
+line-height: 1.2;
+}
+
+.welcome > p:not(.welcome-label) {
+max-width: 650px;
+color: var(--couleur-secondaire);
+font-size: 16px;
+}
+
+.welcome-stats {
+display: flex;
+flex-wrap: wrap;
+gap: 14px;
+margin-top: 26px;
+}
+
+.stat-card {
+display: flex;
+flex-direction: column;
+gap: 4px;
+min-width: 145px;
+padding: 18px 22px;
+border: 1px solid var(--couleur-bordure);
+border-radius: 14px;
+background: #ffffff;
+}
+
+.stat-number {
+color: var(--couleur-principale-foncee);
+font-size: 25px;
+font-weight: 750;
+}
+
+.stat-label {
+color: var(--couleur-secondaire);
+font-size: 13px;
+}
+
+@media (max-width: 600px) {
+.welcome {
+padding: 22px 18px;
+border-radius: 15px;
+}
+
+
+.welcome-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.stat-card {
+    min-width: 0;
+    padding: 14px;
+}
+
+.stat-number {
+    font-size: 21px;
+}
+
+
+}
+css
+/* ========================================
+   DICMED — EN-TÊTE PROFESSIONNEL
+   ======================================== */
+
+.site-header {
+    background: linear-gradient(135deg, #075e65, #087f8c);
+    color: #ffffff;
+    padding: 20px 6%;
+    box-shadow: 0 4px 18px rgba(0, 50, 60, 0.15);
+}
+
+.site-header .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.site-header .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.site-header .brand-name {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.site-header .brand-name span {
+    color: #a9eeee;
+}
+
+.site-header .header-description {
+    text-align: right;
+}
+
+.site-header .header-description p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.site-header .header-description span {
+    display: block;
+    margin-top: 4px;
+    color: #d4eeee;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 18px;
+    }
+
+    .site-header .header-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .site-header .header-description {
+        text-align: left;
+    }
+
+    .site-header .brand-name {
+        font-size: 26px;
+    }
+}
+
+/* ========================================
+DISPOSITION DES FICHES MÉDICALES
+======================================== */
+
+css
+/* ========================================
+   FICHES MÉDICALES DICMED
+======================================== */
+
+#results article.fiche-medicale {
+    max-width: 100%;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dce8ec;
+    border-left: 5px solid #138a83;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/* Titre principal de la fiche */
+#results article.fiche-medicale > h2 {
+    margin: 0 0 22px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #087f8c;
+    color: #066570;
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+/* Grille des rubriques */
+.fiche-grille {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+}
+
+/* Blocs individuels */
+.fiche-bloc {
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #dce8ec;
+    border-radius: 9px;
+    background: #f3f8fa;
+    box-sizing: border-box;
+}
+
+/* Titres des rubriques */
+.fiche-bloc h3 {
+    margin: -14px -14px 12px;
+    padding: 12px 14px;
+    border-bottom: 1px solid #dce8ec;
+    border-radius: 8px 8px 0 0;
+    background: #dceef4;
+    color: #17465e;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+/* Contenu des rubriques */
+.fiche-bloc p {
+    margin: 12px 0;
+    color: #263746;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* Noms des champs */
+.fiche-bloc strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #087f8c;
+    font-weight: 700;
+}
+
+/* Avertissement pour une fiche incomplète */
+.fiche-medicale .fiche-incomplete {
+    margin: 0 0 16px;
+    padding: 10px 12px;
+    border: 1px solid #e8d49a;
+    border-radius: 7px;
+    background: #fff8e5;
+    color: #795b13;
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 650px) {
+    #results article.fiche-medicale {
+        padding: 16px;
+    }
+
+    #results article.fiche-medicale > h2 {
+        font-size: 22px;
+    }
+
+    .fiche-grille {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}

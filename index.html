@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#075e65">
+    <meta name="description" content="Dictionnaire médical personnel pour les étudiants et professionnels de santé.">
+   <title>DicMed — Dictionnaire médical</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<header class="site-header">
+    <div class="header-content">
+        <a href="index.html" class="brand" aria-label="Accueil DicMed">
+            <span class="logo">✚</span>
+            <span class="brand-name">Dic<span>Med</span></span>
+        </a>
+
+        <div class="header-description">
+            <p>Dictionnaire médical numérique</p>
+            <span>Comprendre la médecine, un terme à la fois.</span>
+        </div>
+    </div>
+</header>
+
+
+
+<main>
+
+   <section class="welcome">
+    <p class="welcome-label">TON COMPAGNON D'ÉTUDES EN SANTÉ</p>
+
+
+<h2>Le savoir médical à portée de main.</h2>
+
+<p>
+    Explore les termes médicaux, comprends les organes et découvre
+    les informations essentielles pour enrichir tes connaissances.
+</p>
+
+<div class="welcome-stats">
+    <div class="stat-card">
+        <span class="stat-number" id="nombre-fiches">480</span>
+        <span class="stat-label">Fiches médicales</span>
+    </div>
+
+    <div class="stat-card">
+        <span class="stat-number">24 h/24</span>
+        <span class="stat-label">Accès au dictionnaire</span>
+    </div>
+</div>
+
+
+</section>
+
+
+    <nav class="categories" aria-label="Catégories médicales">
+
+<div class="categories-dropdown">
+    <button
+        type="button"
+        id="categories-toggle"
+        class="categories-toggle"
+        aria-expanded="false"
+        aria-controls="categories"
+    >
+        <span>Catégories médicales</span>
+        <span id="categories-arrow" aria-hidden="true">▼</span>
+    </button>
+
+    <nav
+        id="categories"
+        class="categories"
+        aria-label="Catégories médicales"
+        hidden
+    >
+        <button
+            type="button"
+            class="category-button active"
+            data-category="TOUT"
+        >
+            Tous les termes
+        </button>
+    </nav>
+</div>
+
+
+
+    <section class="search-section" aria-label="Recherche médicale">
+        <label for="search">Rechercher dans le dictionnaire</label>
+
+        <input
+            type="search"
+            id="search"
+            placeholder="Ex. : abdomen, paludisme, artère..."
+            autocomplete="off"
+        >
+
+        <p class="search-help">Tu peux saisir un terme entier ou seulement une partie du mot.</p>
+    </section>
+
+    <section id="results" aria-live="polite">
+        <p>Ton dictionnaire est prêt.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Dictionnaire médical personnel — Outil d'apprentissage en santé.</p>
+    <p>Les informations présentées doivent être vérifiées auprès de sources médicales fiables.</p>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
