@@ -8,6 +8,7 @@
     <meta name="description" content="Dictionnaire médical personnel pour les étudiants et professionnels de santé.">
    <title>DicMed — Dictionnaire médical</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="./manifest.json">
 </head>
 
 <body>
@@ -116,6 +117,18 @@
 
 <script src="script.js"></script>
 
-
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker.js")
+        .then(() => {
+          console.log("DicMed : mode hors connexion activé.");
+        })
+        .catch((erreur) => {
+          console.error("Erreur du service worker :", erreur);
+        });
+    });
+  }
+</script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+{
+"name": "DicMed - Dictionnaire médical",
+"short_name": "DicMed",
+"description": "Dictionnaire médical pour les étudiants en santé et les professionnels de santé.",
+"start_url": "./",
+"scope": "./",
+"display": "standalone",
+"background_color": "#f3f8fa",
+"theme_color": "#087f8c",
+"lang": "fr",
+"icons": []
+}
