@@ -73,8 +73,7 @@ dictionnaire = dictionnaire
             return;
         }
 
-        resultats.textContent =
-            `Dictionnaire prêt : ${dictionnaire.length} termes chargés.`;
+        
 
     } catch (erreur) {
         console.error(
@@ -631,21 +630,14 @@ function afficherResultats() {
 
     // Afficher le message initial si aucune recherche
     // et si toutes les catégories sont sélectionnées
-    if (mot === "" && categorieActive === "TOUT") {
-        resultats.textContent =
-            `Dictionnaire prêt : ${dictionnaire.length} termes chargés.`;
-        return;
-    }
+    
 
     const resultatsFiltres = dictionnaire.filter(element => {
         // Filtrer par catégorie
-        if (
-            categorieActive !== "TOUT" &&
-            element.categorie !== categorieActive
-        ) {
-            return false;
-        }
-
+     // Ne rien afficher lorsque la recherche est vide
+if (mot === "") {
+    return;
+}  
         const terme = element.terme
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
@@ -684,26 +676,91 @@ recherche.addEventListener("input", afficherResultats);
 // ========================================
 // OUVERTURE DU MENU CATÉGORIES MÉDICALES
 // ========================================
+recherche.addEventListener("input", afficherResultats);
 
-const boutonCategories = document.getElementById("categories-toggle");
-const menuCategories = document.getElementById("categories");
-
-if (boutonCategories && menuCategories) {
-    boutonCategories.addEventListener("click", () => {
-        const estOuvert =
-            boutonCategories.getAttribute("aria-expanded") === "true";
-
-        boutonCategories.setAttribute(
-            "aria-expanded",
-            String(!estOuvert)
-        );
-
-        menuCategories.hidden = estOuvert;
-
-        boutonCategories.parentElement.classList.toggle(
-            "open",
-            !estOuvert
-        );
-    });
-}
 chargerDictionnaire();
+// ========================================
+// SYSTÈME DE CONTRIBUTION DICMED
+// ========================================
+
+const zoneContribution = document.getElementById("zone-contribution");
+const formulaireContribution = document.getElementById("form-contribution");
+
+const typeContribution = document.getElementById("type-contribution");
+const champTermePropose = document.getElementById("champ-terme-propose");
+const champTermeCible = document.getElementById("champ-terme-cible");
+const champCible = document.getElementById("champ-cible");
+
+document.getElementById("ouvrir-contribution").addEventListener("click", () => {
+    zoneContribution.hidden = false;
+});
+
+document.getElementById("fermer-contribution").addEventListener("click", () => {
+    zoneContribution.hidden = true;
+});
+
+typeContribution.addEventListener("change", () => {
+    const nouveauTerme = typeContribution.value === "NOUVEAU_TERME";
+
+    champTermePropose.hidden = !nouveauTerme;
+    champTermeCible.hidden = nouveauTerme;
+    champCible.hidden = nouveauTerme;
+});
+
+formulaireContribution.addEventListener("submit", async (evenement) => {
+    evenement.preventDefault();
+
+    const bouton = document.getElementById("envoyer-contribution");
+    const message = document.getElementById("message-contribution");
+
+    const type = typeContribution.value.toLowerCase();
+    const termePropose = document.getElementById("terme-propose").value.trim();
+    const termeCible = document.getElementById("terme-cible").value.trim();
+    const rubrique = document.getElementById("champ-cible").value;
+    const contenu = document.getElementById("contenu-propose").value.trim();
+    const justification = document.getElementById("justification").value.trim();
+
+    if (type === "nouveau_terme" && !termePropose) {
+        message.textContent = "Indique le terme médical proposé.";
+        return;
+    }
+
+    if (type !== "nouveau_terme" && !termeCible) {
+        message.textContent = "Indique le terme à modifier.";
+        return;
+    }
+
+    bouton.disabled = true;
+    bouton.textContent = "Envoi en cours...";
+    message.textContent = "";
+
+    try {
+        const { error } = await window.dicmedSupabase
+            .from("suggestions")
+            .insert({
+                type: type,
+                terme_propose: type === "nouveau_terme" ? termePropose : null,
+                terme_cible: type === "nouveau_terme" ? null : termeCible,
+                champ_cible: type === "nouveau_terme" ? null : rubrique,
+                contenu_propose: contenu,
+                justification: justification || null,
+                statut: "EN_ATTENTE"
+            });
+
+        if (error) {
+            throw error;
+        }
+
+        message.textContent = "✓ Merci ! Ta contribution a bien été envoyée.";
+        formulaireContribution.reset();
+
+        typeContribution.dispatchEvent(new Event("change"));
+
+    } catch (erreur) {
+        console.error("Erreur de contribution :", erreur);
+        message.textContent = "Impossible d'envoyer la contribution. Réessaie plus tard.";
+    } finally {
+        bouton.disabled = false;
+        bouton.textContent = "Envoyer ma contribution";
+    }
+});

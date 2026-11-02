@@ -21,6 +21,9 @@
         </a>
 
         <div class="header-description">
+            <button type="button" id="ouvrir-contribution" class="bouton-contribuer">
+    ✚ Contribuer
+</button>
             <p>Dictionnaire médical numérique</p>
             <span>Comprendre la médecine, un terme à la fois.</span>
         </div>
@@ -42,17 +45,9 @@
     les informations essentielles pour enrichir tes connaissances.
 </p>
 
-<div class="welcome-stats">
-    <div class="stat-card">
-        <span class="stat-number" id="nombre-fiches">480</span>
-        <span class="stat-label">Fiches médicales</span>
-    </div>
 
-    <div class="stat-card">
-        <span class="stat-number">24 h/24</span>
-        <span class="stat-label">Accès au dictionnaire</span>
-    </div>
-</div>
+
+    
 
 
 </section>
@@ -60,33 +55,7 @@
 
     <nav class="categories" aria-label="Catégories médicales">
 
-<div class="categories-dropdown">
-    <button
-        type="button"
-        id="categories-toggle"
-        class="categories-toggle"
-        aria-expanded="false"
-        aria-controls="categories"
-    >
-        <span>Catégories médicales</span>
-        <span id="categories-arrow" aria-hidden="true">▼</span>
-    </button>
 
-    <nav
-        id="categories"
-        class="categories"
-        aria-label="Catégories médicales"
-        hidden
-    >
-        <button
-            type="button"
-            class="category-button active"
-            data-category="TOUT"
-        >
-            Tous les termes
-        </button>
-    </nav>
-</div>
 
 
 
@@ -113,7 +82,62 @@
     <p>Dictionnaire médical personnel — Outil d'apprentissage en santé.</p>
     <p>Les informations présentées doivent être vérifiées auprès de sources médicales fiables.</p>
 </footer>
+<!-- FORMULAIRE DE CONTRIBUTION -->
+<section id="zone-contribution" class="zone-contribution" hidden>
+    <div class="carte-contribution">
+        <button type="button" id="fermer-contribution" class="fermer-contribution">×</button>
 
+        <h2>Contribuer à DICMED</h2>
+        <p>Aide-nous à améliorer le dictionnaire médical.</p>
+
+        <form id="form-contribution">
+
+            <label for="type-contribution">Type de contribution</label>
+            <select id="type-contribution" required>
+                <option value="NOUVEAU_TERME">Proposer un nouveau terme</option>
+                <option value="CORRECTION">Corriger une fiche existante</option>
+                <option value="COMPLEMENT">Ajouter un complément</option>
+            </select>
+
+            <div id="champ-terme-propose">
+                <label for="terme-propose">Terme médical proposé</label>
+                <input type="text" id="terme-propose" placeholder="Ex. : Tachycardie">
+            </div>
+
+            <div id="champ-terme-cible" hidden>
+                <label for="terme-cible">Terme concerné</label>
+                <input type="text" id="terme-cible" placeholder="Nom du terme dans DICMED">
+            </div>
+
+            <div id="champ-cible" hidden>
+                <label for="champ-cible">Rubrique concernée</label>
+                <select id="champ-cible">
+                    <option value="Définition">Définition</option>
+                    <option value="Étymologie">Étymologie</option>
+                    <option value="Fonction">Fonction</option>
+                    <option value="Pathologies">Pathologies</option>
+                    <option value="Autre">Autre</option>
+                </select>
+            </div>
+
+            <label for="contenu-propose">Contenu de la proposition</label>
+            <textarea id="contenu-propose" rows="5" required
+                placeholder="Écris ta proposition ici..."></textarea>
+
+            <label for="justification">Justification ou source (facultatif)</label>
+            <textarea id="justification" rows="3"
+                placeholder="Explique ta correction ou indique une source."></textarea>
+
+            <button type="submit" id="envoyer-contribution">
+                Envoyer ma contribution
+            </button>
+
+            <p id="message-contribution" role="status"></p>
+        </form>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
 <script src="script.js"></script>
 
 
