@@ -830,3 +830,56 @@ css
         gap: 12px;
     }
 }
+.lien-terme-medical {
+    color: #087f8c;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    cursor: pointer;
+}
+
+.lien-terme-medical:hover {
+    color: #066570;
+    text-decoration-style: solid;
+}
+/* En-tête de la fiche médicale */
+.entete-fiche {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.entete-fiche h2 {
+    flex: 1;
+    margin: 0;
+}
+
+.actions-fiche {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.actions-fiche .action-terme {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #dce8ec;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #087f8c;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.actions-fiche .favori.actif {
+    color: #e34b65;
+    background: #fff0f3;
+    border-color: #e9a0af;
+}
+
+.actions-fiche .action-terme:hover {
+    background: #dceef4;
+}

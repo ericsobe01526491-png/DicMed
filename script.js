@@ -162,23 +162,81 @@ function actualiserBoutonsCategories() {
 // AFFICHAGE D'UN TERME
 // ========================================
 
+
 function afficherTerme(element) {
     const article = document.createElement("article");
     article.classList.add("fiche-medicale");
+const entete = document.createElement("div");
+entete.className = "entete-fiche";
 
-    const titre = document.createElement("h2");
-    titre.textContent = element.terme;
-    article.appendChild(titre);
+const titre = document.createElement("h2");
+titre.textContent = element.terme || element.nom;
 
-    if (
-        typeof element.definition !== "string" ||
-        !element.definition.trim()
-    ) {
-        const statut = document.createElement("p");
-        statut.textContent = "⚠️ Fiche à compléter";
-        statut.className = "fiche-incomplete";
-        article.appendChild(statut);
+const actions = document.createElement("div");
+actions.className = "actions-fiche";
+
+// Favoris
+const boutonFavori = document.createElement("button");
+boutonFavori.type = "button";
+boutonFavori.className = "action-terme favori";
+
+const nomTerme = element.terme || element.nom;
+const CLE_FAVORIS = "dicmed_favoris";
+
+function actualiserFavori() {
+    let favoris = JSON.parse(localStorage.getItem(CLE_FAVORIS) || "[]");
+    const actif = favoris.includes(nomTerme);
+
+    boutonFavori.textContent = actif ? "♥" : "♡";
+    boutonFavori.classList.toggle("actif", actif);
+    boutonFavori.title = actif
+        ? "Retirer des favoris"
+        : "Ajouter aux favoris";
+}
+
+actualiserFavori();
+
+boutonFavori.addEventListener("click", () => {
+    let favoris = JSON.parse(localStorage.getItem(CLE_FAVORIS) || "[]");
+
+    favoris = favoris.includes(nomTerme)
+        ? favoris.filter(nom => nom !== nomTerme)
+        : [...favoris, nomTerme];
+
+    localStorage.setItem(CLE_FAVORIS, JSON.stringify(favoris));
+    actualiserFavori();
+});
+
+// Partage de la fiche entière
+const boutonPartager = document.createElement("button");
+boutonPartager.type = "button";
+boutonPartager.className = "action-terme partager";
+boutonPartager.textContent = "↗";
+boutonPartager.title = "Partager la fiche complète";
+
+boutonPartager.addEventListener("click", async () => {
+    const contenu = article.innerText;
+
+    try {
+        if (navigator.share) {
+            await navigator.share({
+                title: `DICMED - ${nomTerme}`,
+                text: contenu
+            });
+        } else {
+            await navigator.clipboard.writeText(contenu);
+            alert("La fiche médicale complète a été copiée !");
+        }
+    } catch (erreur) {
+        if (erreur.name !== "AbortError") {
+            alert("Impossible de partager la fiche.");
+        }
     }
+});
+
+actions.append(boutonFavori, boutonPartager);
+entete.append(titre, actions);
+article.appendChild(entete);
 
     const grille = document.createElement("div");
     grille.className = "fiche-grille";
@@ -192,7 +250,7 @@ function afficherTerme(element) {
         bloc.appendChild(titreBloc);
 
         champs.forEach(([nom, valeur]) => {
-            ajouterChamp(bloc, nom, valeur);
+            ajouterChamp(bloc, nom, valeur, element);
         });
 
         if (bloc.querySelector("p")) {
@@ -200,48 +258,233 @@ function afficherTerme(element) {
         }
     }
 
+    // Informations générales : conservées
     creerRubrique("Profil du terme", [
         ["Genre", element.genre],
         ["Nombre", element.nombre],
-        ["Catégorie", element.categorie],
-        [
-            "Systèmes",
-            Array.isArray(element.systemes)
-                ? element.systemes.join(", ")
-                : element.systemes
-        ]
+        ["Catégorie", element.categorie || element.section_source],
+        ["Systèmes", element.systemes]
     ]);
 
+    // Description habituelle
     creerRubrique("Description", [
         ["Étymologie", element.etymologie],
         ["Définition", element.definition],
-        [
-            "Synonymes",
-            Array.isArray(element.synonymes)
-                ? element.synonymes.join(", ")
-                : element.synonymes
-        ]
+        ["Synonymes", element.synonymes]
     ]);
 
+    // Informations anatomiques habituelles
     creerRubrique("Anatomie et fonctions", [
         ["Fonction", element.fonction],
         ["Localisation", element.localisation],
         ["Trajet", element.trajet]
     ]);
 
+    // Pathologies habituelles
     creerRubrique("Pathologies", [
+        ["Pathologies", element.pathologies]
+    ]);
+
+    // Informations spécifiques aux hormones
+    creerRubrique("Fiche hormonale", [
+        ["Abréviation", element.abreviation],
+        ["Nature chimique", element.nature_chimique],
         [
-            "Pathologies",
-            Array.isArray(element.pathologies)
-                ? element.pathologies.join(", ")
-                : element.pathologies
-        ]
+            "Glande ou organe producteur",
+            element.glande_ou_organe_producteur || element.organe_producteur
+        ],
+        ["Cellules productrices", element.cellules_productrices],
+        ["Anomalies associées", element.anomalies_associees]
     ]);
 
     article.appendChild(grille);
 
+    // Afficher les relations anatomiques
+    ajouterRelationsAnatomiques(article, element);
+
+    // Conserver les termes associés automatiques
+    ajouterTermesAssocies(article, element);
 
     return article;
+}
+
+
+// ========================================
+// RELATIONS ANATOMIQUES
+// ========================================
+
+function ajouterRelationsAnatomiques(article, element) {
+    const relations = element.relations_anatomiques;
+
+    if (!Array.isArray(relations) || relations.length === 0) {
+        return;
+    }
+
+    const section = document.createElement("section");
+    section.className = "relations-anatomiques";
+
+    const titre = document.createElement("h3");
+    titre.textContent = "🧠 Relations anatomiques";
+    section.appendChild(titre);
+
+    const liste = document.createElement("div");
+    liste.className = "liste-relations-anatomiques";
+
+    relations.forEach(relation => {
+        if (!relation || !relation.terme) {
+            return;
+        }
+
+        const ligne = document.createElement("p");
+
+        const type = document.createElement("strong");
+        type.textContent = `${relation.type || "Relation"} : `;
+        ligne.appendChild(type);
+
+        const nomRecherche = relation.terme
+            .trim()
+            .toLocaleLowerCase("fr");
+
+        const ficheLiee = dictionnaire.find(fiche =>
+            (fiche.terme || fiche.nom || "")
+                .trim()
+                .toLocaleLowerCase("fr") === nomRecherche
+        );
+
+        if (ficheLiee) {
+            const lien = document.createElement("a");
+            lien.href = "#";
+            lien.className = "lien-terme-medical";
+            lien.textContent = ficheLiee.terme || ficheLiee.nom;
+
+            lien.addEventListener("click", evenement => {
+                evenement.preventDefault();
+                afficherFicheComplete(ficheLiee);
+            });
+
+            ligne.appendChild(lien);
+        } else {
+            ligne.appendChild(
+                document.createTextNode(relation.terme)
+            );
+        }
+
+        liste.appendChild(ligne);
+    });
+
+    if (liste.children.length === 0) {
+        return;
+    }
+
+    section.appendChild(liste);
+    article.appendChild(section);
+}
+
+
+// ========================================
+// TERMES ASSOCIÉS AUTOMATIQUES
+// ========================================
+
+function ajouterTermesAssocies(article, element) {
+    const nomActuel = (element.terme || element.nom || "")
+        .trim()
+        .toLocaleLowerCase("fr");
+
+    const champs = [
+        element.definition,
+        element.fonction,
+        element.localisation,
+        element.trajet,
+        element.pathologies,
+        element.synonymes
+    ];
+
+    const texteFiche = champs
+        .flatMap(valeur => Array.isArray(valeur) ? valeur : [valeur])
+        .filter(valeur => typeof valeur === "string")
+        .join(" ");
+
+    if (!texteFiche.trim()) {
+        return;
+    }
+
+    const noms = [
+        ...new Set(
+            dictionnaire
+                .map(fiche => fiche.terme || fiche.nom)
+                .filter(nom =>
+                    typeof nom === "string" &&
+                    nom.trim() !== "" &&
+                    nom.trim().toLocaleLowerCase("fr") !== nomActuel
+                )
+        )
+    ].sort((a, b) => b.length - a.length);
+
+    const associes = [];
+
+    for (const nom of noms) {
+        const motif = nom
+            .trim()
+            .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+            .replace(/\s+/g, "\\s+");
+
+        const regex = new RegExp(
+            `(?<![\\p{L}\\p{N}])${motif}(?![\\p{L}\\p{N}])`,
+            "iu"
+        );
+
+        if (regex.test(texteFiche)) {
+            const fiche = dictionnaire.find(item =>
+                (item.terme || item.nom || "")
+                    .toLocaleLowerCase("fr") ===
+                nom.toLocaleLowerCase("fr")
+            );
+
+            if (fiche) {
+                associes.push({ nom, fiche });
+            }
+        }
+
+        if (associes.length >= 8) {
+            break;
+        }
+    }
+
+    if (associes.length === 0) {
+        return;
+    }
+
+    const section = document.createElement("section");
+    section.className = "termes-associes";
+
+    const titre = document.createElement("h3");
+    titre.textContent = "🔗 Termes associés";
+    section.appendChild(titre);
+
+    const liste = document.createElement("p");
+
+    associes.forEach((associe, index) => {
+        if (index > 0) {
+            liste.appendChild(
+                document.createTextNode(" • ")
+            );
+        }
+
+        const lien = document.createElement("a");
+        lien.href = "#";
+        lien.className = "lien-terme-medical";
+        lien.textContent = associe.nom;
+
+        lien.addEventListener("click", evenement => {
+            evenement.preventDefault();
+            afficherFicheComplete(associe.fiche);
+        });
+
+        liste.appendChild(lien);
+    });
+
+    section.appendChild(liste);
+    article.appendChild(section);
 }
 
 function afficherNomTerme(element) {
@@ -283,13 +526,74 @@ resultats.appendChild(afficherTerme(element));
 // AJOUT D'UN CHAMP À LA FICHE
 // ========================================
 
-function ajouterChamp(parent, nom, valeur) {
-    // Ne pas afficher les champs vides
-    if (
-        valeur === undefined ||
-        valeur === null ||
-        valeur === ""
-    ) {
+
+function ajouterTexteAvecLiens(parent, texte, termeActuel) {
+    const noms = [
+        ...new Set(
+            dictionnaire
+                .map(fiche => fiche.terme || fiche.nom)
+                .filter(nom => typeof nom === "string" && nom.trim())
+        )
+    ]
+        .filter(nom => nom.toLocaleLowerCase("fr") !==
+            (termeActuel.terme || termeActuel.nom).toLocaleLowerCase("fr"))
+        .sort((a, b) => b.length - a.length);
+
+    if (noms.length === 0) {
+        parent.appendChild(document.createTextNode(texte));
+        return;
+    }
+
+    const echapper = mot =>
+        mot.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+           .replace(/\s+/g, "\\s+");
+
+    const motif = noms.map(echapper).join("|");
+    const regex = new RegExp(
+        `(?<![\\p{L}\\p{N}])(${motif})(?![\\p{L}\\p{N}])`,
+        "giu"
+    );
+
+    let position = 0;
+    let match;
+
+    while ((match = regex.exec(texte)) !== null) {
+        parent.appendChild(
+            document.createTextNode(texte.slice(position, match.index))
+        );
+
+        const nomTrouve = match[1];
+        const fiche = dictionnaire.find(element =>
+            (element.terme || element.nom).toLocaleLowerCase("fr") ===
+            nomTrouve.toLocaleLowerCase("fr")
+        );
+
+        if (fiche) {
+            const lien = document.createElement("a");
+            lien.href = "#";
+            lien.className = "lien-terme-medical";
+            lien.textContent = nomTrouve;
+
+            lien.addEventListener("click", evenement => {
+                evenement.preventDefault();
+                afficherFicheComplete(fiche);
+            });
+
+            parent.appendChild(lien);
+        } else {
+            parent.appendChild(document.createTextNode(nomTrouve));
+        }
+
+        position = regex.lastIndex;
+    }
+
+    parent.appendChild(
+        document.createTextNode(texte.slice(position))
+    );
+}
+
+function ajouterChamp(parent, nom, valeur, termeActuel) {
+    if (valeur === undefined || valeur === null || valeur === "") {
         return;
     }
 
@@ -303,13 +607,11 @@ function ajouterChamp(parent, nom, valeur) {
     etiquette.textContent = `${nom} : `;
     paragraphe.appendChild(etiquette);
 
-    paragraphe.appendChild(
-        document.createTextNode(
-            Array.isArray(valeur)
-                ? valeur.join(", ")
-                : String(valeur)
-        )
-    );
+    const texte = Array.isArray(valeur)
+        ? valeur.join(", ")
+        : String(valeur);
+
+    ajouterTexteAvecLiens(paragraphe, texte, termeActuel);
 
     parent.appendChild(paragraphe);
 }
@@ -379,5 +681,29 @@ recherche.addEventListener("input", afficherResultats);
 // ========================================
 // DÉMARRAGE
 // ========================================
+// ========================================
+// OUVERTURE DU MENU CATÉGORIES MÉDICALES
+// ========================================
 
+const boutonCategories = document.getElementById("categories-toggle");
+const menuCategories = document.getElementById("categories");
+
+if (boutonCategories && menuCategories) {
+    boutonCategories.addEventListener("click", () => {
+        const estOuvert =
+            boutonCategories.getAttribute("aria-expanded") === "true";
+
+        boutonCategories.setAttribute(
+            "aria-expanded",
+            String(!estOuvert)
+        );
+
+        menuCategories.hidden = estOuvert;
+
+        boutonCategories.parentElement.classList.toggle(
+            "open",
+            !estOuvert
+        );
+    });
+}
 chargerDictionnaire();

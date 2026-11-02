@@ -1,8 +1,8 @@
 {
-  "titre": "Dictionnaire médical — conversion du document fourni",
+  "titre": "Dictionnaire médical DICMED — dictionnaire mis à jour",
   "langue": "fr",
-  "fichier_source": "APPAREIL RESPIRATOIRE.docx",
-  "nombre_fiches": 480,
+  "fichier_source": "Dictionnaire médical DICMED — appareil respiratoire et hormones humaines",
+  "nombre_fiches": 575,
   "termes": [
     {
       "numero_source": 1,
@@ -6115,6 +6115,15 @@
       "etymologie": "« Bourgeon » vient du français ancien et désigne une petite structure arrondie ou en développement. « Gustatif » vient du latin gustare, « goûter ».",
       "definition": "Les bourgeons gustatifs sont des structures sensorielles microscopiques contenant des cellules réceptrices du goût. Ils sont présents principalement dans certaines papilles de la langue, mais également dans d'autres régions de la cavité buccale et du pharynx.",
       "fonction": "Détecter les substances chimiques dissoutes dans la salive. Participer à la perception des cinq grandes modalités gustatives : sucré, salé, acide, amer et umami. Transformer les stimulations chimiques en signaux nerveux. Pathologies et troubles associés Agueusie : perte complète du goût Hypogueusie : diminution de la perception gustative Dysgueusie : altération ou déformation du goût Infections buccales Lésions de la langue Effets secondaires de certains médicaments Troubles neurologiques",
+       "pathologies": [
+        "Agueusie : perte complète du goût",
+        "Hypogueusie : diminution de la perception gustative",
+        "Dysgueusie : altération ou déformation du goût",
+        "Infections buccales",
+        "Lésions de la langue",
+        "Effets secondaires de certains médicaments",
+        "Troubles neurologiques"
+        ],
       "contenu_original": [
         "Étymologie",
         "« Bourgeon » vient du français ancien et désigne une petite structure arrondie ou en développement. « Gustatif » vient du latin gustare, « goûter ».",
@@ -13890,6 +13899,7 @@
         "Choc cardiogénique",
         "Tumeur cardiaque",
         "Thrombose intracardiaque"
+        
       ]
     },
     {
@@ -14913,6 +14923,1369 @@
         "Embolie systémique",
         "Artériopathie oblitérante"
       ]
+    },
+    {
+      "numero_source": 481,
+      "nom": "Hormone de libération de la thyrotropine",
+      "section_source": "HORMONES HUMAINES — HYPOTHALAMUS",
+      "definition": "Hormone hypothalamique stimulant principalement la sécrétion de TSH et, dans une moindre mesure, de prolactine.",
+      "abreviation": "TRH",
+      "synonymes": [
+        "Thyrolibérine",
+        "hormone de libération de la TSH"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Tripeptide",
+      "glande_ou_organe_producteur": "Hypothalamus",
+      "cellules_productrices": "Neurones neuroendocrines, notamment du noyau paraventriculaire.",
+      "anomalies_associees": "Les anomalies de l’axe peuvent contribuer à des troubles thyroïdiens centraux; la TRH seule n’est généralement pas dosée en routine."
+    },
+    {
+      "numero_source": 482,
+      "nom": "Hormone de libération des gonadotrophines",
+      "section_source": "HORMONES HUMAINES — HYPOTHALAMUS",
+      "definition": "Stimule la sécrétion hypophysaire de FSH et de LH et régule la fonction reproductive.",
+      "abreviation": "GnRH",
+      "synonymes": [
+        "Gonadolibérine",
+        "LHRH"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Décapeptide",
+      "glande_ou_organe_producteur": "Hypothalamus",
+      "cellules_productrices": "Neurones à GnRH.",
+      "anomalies_associees": "Un déficit peut provoquer un hypogonadisme hypogonadotrope, un retard pubertaire ou une infertilité."
+    },
+    {
+      "numero_source": 483,
+      "nom": "Hormone de libération de la corticotrophine",
+      "section_source": "HORMONES HUMAINES — HYPOTHALAMUS",
+      "definition": "Stimule la libération d’ACTH et participe à la réponse hormonale au stress.",
+      "abreviation": "CRH",
+      "synonymes": [
+        "Corticolibérine",
+        "CRF"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide de 41 acides aminés",
+      "glande_ou_organe_producteur": "Hypothalamus",
+      "cellules_productrices": "Neurones neuroendocrines du noyau paraventriculaire.",
+      "anomalies_associees": "Une perturbation de l’axe CRH-ACTH-cortisol peut participer à une insuffisance ou un excès de cortisol; la CRH seule n’établit pas le diagnostic."
+    },
+    {
+      "numero_source": 484,
+      "nom": "Hormone de libération de l’hormone de croissance",
+      "section_source": "HORMONES HUMAINES — HYPOTHALAMUS",
+      "definition": "Stimule la sécrétion de GH par l’hypophyse antérieure.",
+      "abreviation": "GHRH",
+      "synonymes": [
+        "Somatolibérine",
+        "somatocrinine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Hypothalamus",
+      "cellules_productrices": "Neurones neuroendocrines hypothalamiques.",
+      "anomalies_associees": "Une stimulation insuffisante peut contribuer à un déficit en GH; l’excès de GH est le plus souvent d’origine hypophysaire."
+    },
+    {
+      "numero_source": 485,
+      "nom": "Somatostatine hypothalamique",
+      "section_source": "HORMONES HUMAINES — HYPOTHALAMUS",
+      "definition": "Inhibe notamment la sécrétion de GH et peut inhiber celle de TSH.",
+      "abreviation": "SST",
+      "synonymes": [
+        "GHIH",
+        "hormone inhibitrice de GH"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide (SST-14 et SST-28)",
+      "glande_ou_organe_producteur": "Hypothalamus; également pancréas et tube digestif",
+      "cellules_productrices": "Neurones hypothalamiques; cellules delta dans d’autres organes.",
+      "anomalies_associees": "Les tumeurs sécrétantes peuvent causer un somatostatinome; un déficit hypothalamique isolé n’est pas une maladie courante définie."
+    },
+    {
+      "numero_source": 486,
+      "nom": "Dopamine hypothalamique",
+      "section_source": "HORMONES HUMAINES — HYPOTHALAMUS",
+      "definition": "Inhibe principalement la sécrétion de prolactine par l’hypophyse.",
+      "abreviation": "DA",
+      "synonymes": [
+        "Facteur inhibiteur de prolactine",
+        "PIH"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Catécholamine dérivée de la tyrosine",
+      "glande_ou_organe_producteur": "Hypothalamus",
+      "cellules_productrices": "Neurones dopaminergiques tubéro-infundibulaires.",
+      "anomalies_associees": "Une baisse de l’inhibition dopaminergique peut entraîner une hyperprolactinémie, avec galactorrhée, troubles menstruels ou baisse de libido."
+    },
+    {
+      "numero_source": 487,
+      "nom": "Vasopressine",
+      "section_source": "HORMONES HUMAINES — HYPOTHALAMUS",
+      "definition": "Favorise la réabsorption d’eau par les reins et, à forte concentration, la vasoconstriction.",
+      "abreviation": "ADH; AVP",
+      "synonymes": [
+        "Hormone antidiurétique",
+        "arginine-vasopressine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide de 9 acides aminés",
+      "glande_ou_organe_producteur": "Synthèse hypothalamique; libération par la neurohypophyse",
+      "cellules_productrices": "Neurones magnocellulaires des noyaux supraoptique et paraventriculaire.",
+      "anomalies_associees": "Déficit: diabète insipide central; résistance rénale: diabète insipide néphrogénique; excès inapproprié: SIADH et hyponatrémie."
+    },
+    {
+      "numero_source": 488,
+      "nom": "Ocytocine",
+      "section_source": "HORMONES HUMAINES — HYPOTHALAMUS",
+      "definition": "Stimule les contractions utérines et le réflexe d’éjection du lait.",
+      "abreviation": "OXT; OT",
+      "synonymes": [
+        "Oxytocine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide de 9 acides aminés",
+      "glande_ou_organe_producteur": "Synthèse hypothalamique; libération par la neurohypophyse",
+      "cellules_productrices": "Neurones magnocellulaires hypothalamiques.",
+      "anomalies_associees": "Pas de syndrome courant défini par un déficit isolé; l’administration peut provoquer une hyperstimulation utérine et des anomalies du rythme fœtal."
+    },
+    {
+      "numero_source": 489,
+      "nom": "Hormone de croissance",
+      "section_source": "HORMONES HUMAINES — HYPOPHYSE ANTÉRIEURE",
+      "definition": "Stimule la croissance corporelle, la synthèse protéique et agit en partie par l’IGF-1.",
+      "abreviation": "GH; hGH",
+      "synonymes": [
+        "Somatotropine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine",
+      "glande_ou_organe_producteur": "Hypophyse antérieure",
+      "cellules_productrices": "Cellules somatotropes.",
+      "anomalies_associees": "Déficit: retard de croissance chez l’enfant ou déficit somatotrope chez l’adulte; excès: gigantisme ou acromégalie."
+    },
+    {
+      "numero_source": 490,
+      "nom": "Prolactine",
+      "section_source": "HORMONES HUMAINES — HYPOPHYSE ANTÉRIEURE",
+      "definition": "Favorise le développement mammaire et la production de lait.",
+      "abreviation": "PRL",
+      "synonymes": [
+        "Lactotropine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone protéique",
+      "glande_ou_organe_producteur": "Hypophyse antérieure",
+      "cellules_productrices": "Cellules lactotropes.",
+      "anomalies_associees": "Excès: hyperprolactinémie, galactorrhée, aménorrhée, infertilité ou baisse de libido; déficit: difficulté de lactation possible."
+    },
+    {
+      "numero_source": 491,
+      "nom": "Hormone thyréotrope",
+      "section_source": "HORMONES HUMAINES — HYPOPHYSE ANTÉRIEURE",
+      "definition": "Stimule la synthèse et la libération des hormones thyroïdiennes T3 et T4.",
+      "abreviation": "TSH",
+      "synonymes": [
+        "Thyréostimuline"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine",
+      "glande_ou_organe_producteur": "Hypophyse antérieure",
+      "cellules_productrices": "Cellules thyréotropes.",
+      "anomalies_associees": "TSH élevée peut accompagner une hypothyroïdie primaire; TSH basse peut accompagner une hyperthyroïdie ou une hypothyroïdie centrale, selon T4 libre."
+    },
+    {
+      "numero_source": 492,
+      "nom": "Hormone corticotrope",
+      "section_source": "HORMONES HUMAINES — HYPOPHYSE ANTÉRIEURE",
+      "definition": "Stimule le cortex surrénalien, notamment la production de cortisol.",
+      "abreviation": "ACTH",
+      "synonymes": [
+        "Corticotrophine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide dérivé de la POMC",
+      "glande_ou_organe_producteur": "Hypophyse antérieure",
+      "cellules_productrices": "Cellules corticotropes.",
+      "anomalies_associees": "Excès: maladie de Cushing si origine hypophysaire; déficit: insuffisance surrénalienne centrale."
+    },
+    {
+      "numero_source": 493,
+      "nom": "Hormone folliculo-stimulante",
+      "section_source": "HORMONES HUMAINES — HYPOPHYSE ANTÉRIEURE",
+      "definition": "Participe à la maturation folliculaire chez la femme et à la spermatogenèse chez l’homme.",
+      "abreviation": "FSH",
+      "synonymes": [
+        "Follitropine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine",
+      "glande_ou_organe_producteur": "Hypophyse antérieure",
+      "cellules_productrices": "Cellules gonadotropes.",
+      "anomalies_associees": "Des taux anormaux peuvent accompagner hypogonadisme, insuffisance ovarienne, ménopause ou altération de la spermatogenèse."
+    },
+    {
+      "numero_source": 494,
+      "nom": "Hormone lutéinisante",
+      "section_source": "HORMONES HUMAINES — HYPOPHYSE ANTÉRIEURE",
+      "definition": "Déclenche l’ovulation et stimule la production de progestérone; chez l’homme, stimule la production de testostérone.",
+      "abreviation": "LH",
+      "synonymes": [
+        "Lutropine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine",
+      "glande_ou_organe_producteur": "Hypophyse antérieure",
+      "cellules_productrices": "Cellules gonadotropes.",
+      "anomalies_associees": "Des anomalies peuvent être associées à des troubles ovulatoires, à l’hypogonadisme ou à certains troubles pubertaires."
+    },
+    {
+      "numero_source": 495,
+      "nom": "Hormone mélanotrope",
+      "section_source": "HORMONES HUMAINES — HYPOPHYSE ANTÉRIEURE",
+      "definition": "Peptide issu de la POMC impliqué dans la pigmentation; son rôle dépend de la forme et du tissu.",
+      "abreviation": "MSH",
+      "synonymes": [
+        "Mélanotropine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide dérivé de la POMC",
+      "glande_ou_organe_producteur": "Lobe intermédiaire hypophysaire; production liée à la POMC dans certains tissus",
+      "cellules_productrices": "Cellules mélanotropes et autres cellules exprimant la POMC.",
+      "anomalies_associees": "Les anomalies de voies mélanocortines peuvent modifier la pigmentation; l’ACTH élevée peut aussi stimuler les récepteurs mélanocortines."
+    },
+    {
+      "numero_source": 496,
+      "nom": "Thyroxine",
+      "section_source": "HORMONES HUMAINES — THYROÏDE",
+      "definition": "Hormone thyroïdienne circulante servant en grande partie de précurseur à la T3, plus active.",
+      "abreviation": "T4",
+      "synonymes": [
+        "Tétraiodothyronine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Dérivé iodé de la tyrosine",
+      "glande_ou_organe_producteur": "Thyroïde",
+      "cellules_productrices": "Cellules folliculaires thyroïdiennes.",
+      "anomalies_associees": "T4 basse: hypothyroïdie selon contexte; T4 élevée: hyperthyroïdie ou excès hormonal; interpréter avec TSH et contexte clinique."
+    },
+    {
+      "numero_source": 497,
+      "nom": "Triiodothyronine",
+      "section_source": "HORMONES HUMAINES — THYROÏDE",
+      "definition": "Hormone thyroïdienne biologiquement très active qui régule le métabolisme, la thermogenèse et le développement.",
+      "abreviation": "T3",
+      "synonymes": [
+        "Triiodothyronine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Dérivé iodé de la tyrosine",
+      "glande_ou_organe_producteur": "Thyroïde et conversion périphérique de T4",
+      "cellules_productrices": "Cellules folliculaires pour la T3 sécrétée; tissus périphériques pour la conversion.",
+      "anomalies_associees": "T3 élevée peut accompagner une thyrotoxicose; T3 basse se voit dans diverses situations, notamment maladie non thyroïdienne."
+    },
+    {
+      "numero_source": 498,
+      "nom": "Calcitonine",
+      "section_source": "HORMONES HUMAINES — THYROÏDE",
+      "definition": "Hormone qui peut réduire la libération de calcium par l’os; son rôle dans l’équilibre calcique adulte est limité par rapport à la PTH et à la vitamine D.",
+      "abreviation": "—",
+      "synonymes": [
+        "Thyréocalcitonine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Thyroïde",
+      "cellules_productrices": "Cellules C parafolliculaires.",
+      "anomalies_associees": "Marqueur utile de certains cancers médullaires de la thyroïde; les variations isolées ont souvent une signification limitée."
+    },
+    {
+      "numero_source": 499,
+      "nom": "Parathormone",
+      "section_source": "HORMONES HUMAINES — PARATHYROÏDES",
+      "definition": "Augmente la calcémie et contribue à réguler le phosphate et l’activation rénale de la vitamine D.",
+      "abreviation": "PTH",
+      "synonymes": [
+        "Hormone parathyroïdienne"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone peptidique",
+      "glande_ou_organe_producteur": "Parathyroïdes",
+      "cellules_productrices": "Cellules principales.",
+      "anomalies_associees": "Excès: hyperparathyroïdie et hypercalcémie possible; déficit: hypoparathyroïdie et hypocalcémie."
+    },
+    {
+      "numero_source": 500,
+      "nom": "Insuline",
+      "section_source": "HORMONES HUMAINES — PANCRÉAS ENDOCRINE",
+      "definition": "Favorise l’utilisation et le stockage des nutriments et diminue la glycémie.",
+      "abreviation": "INS",
+      "synonymes": [
+        "Hormone hypoglycémiante"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone peptidique de 51 acides aminés",
+      "glande_ou_organe_producteur": "Pancréas endocrine",
+      "cellules_productrices": "Cellules bêta des îlots de Langerhans.",
+      "anomalies_associees": "Déficit absolu: diabète de type 1; déficit relatif et résistance: diabète de type 2; excès d’action: hypoglycémie."
+    },
+    {
+      "numero_source": 501,
+      "nom": "Glucagon",
+      "section_source": "HORMONES HUMAINES — PANCRÉAS ENDOCRINE",
+      "definition": "Augmente la glycémie en stimulant notamment la production hépatique de glucose.",
+      "abreviation": "GCG",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone peptidique",
+      "glande_ou_organe_producteur": "Pancréas endocrine",
+      "cellules_productrices": "Cellules alpha des îlots de Langerhans.",
+      "anomalies_associees": "Excès rare: glucagonome, parfois associé à diabète et éruption cutanée; défaut de réponse peut contribuer à l’hypoglycémie dans certains contextes."
+    },
+    {
+      "numero_source": 502,
+      "nom": "Somatostatine pancréatique",
+      "section_source": "HORMONES HUMAINES — PANCRÉAS ENDOCRINE",
+      "definition": "Inhibe localement la sécrétion d’insuline, de glucagon et d’autres sécrétions digestives.",
+      "abreviation": "SST",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Pancréas endocrine",
+      "cellules_productrices": "Cellules delta des îlots de Langerhans.",
+      "anomalies_associees": "Une tumeur sécrétante peut causer un somatostatinome; les analogues peuvent modifier la glycémie et la digestion."
+    },
+    {
+      "numero_source": 503,
+      "nom": "Polypeptide pancréatique",
+      "section_source": "HORMONES HUMAINES — PANCRÉAS ENDOCRINE",
+      "definition": "Participe à la régulation des sécrétions pancréatiques et de certaines fonctions digestives et de satiété.",
+      "abreviation": "PP; PPY",
+      "synonymes": [
+        "Polypeptide des cellules PP"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Pancréas endocrine",
+      "cellules_productrices": "Cellules PP/F des îlots pancréatiques.",
+      "anomalies_associees": "Pas de syndrome courant diagnostiqué sur le seul dosage; variations possibles dans certaines maladies pancréatiques ou métaboliques."
+    },
+    {
+      "numero_source": 504,
+      "nom": "Amyline",
+      "section_source": "HORMONES HUMAINES — PANCRÉAS ENDOCRINE",
+      "definition": "Co-sécrétée avec l’insuline, ralentit la vidange gastrique et contribue à la satiété et au contrôle postprandial du glucose.",
+      "abreviation": "IAPP",
+      "synonymes": [
+        "Polypeptide amyloïde des îlots"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Pancréas endocrine",
+      "cellules_productrices": "Cellules bêta.",
+      "anomalies_associees": "Les dépôts amyloïdes d’IAPP sont associés au diabète de type 2; ce n’est pas un diagnostic fondé sur un dosage courant."
+    },
+    {
+      "numero_source": 505,
+      "nom": "Cortisol",
+      "section_source": "HORMONES HUMAINES — CORTEX SURRÉNALIEN",
+      "definition": "Glucocorticoïde essentiel à la réponse au stress, au métabolisme et au maintien de la pression artérielle.",
+      "abreviation": "—",
+      "synonymes": [
+        "Hydrocortisone (forme médicamenteuse identique)"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone stéroïde",
+      "glande_ou_organe_producteur": "Cortex surrénalien, zone fasciculée",
+      "cellules_productrices": "Cellules de la zone fasciculée.",
+      "anomalies_associees": "Excès chronique: syndrome de Cushing; déficit: insuffisance surrénalienne."
+    },
+    {
+      "numero_source": 506,
+      "nom": "Aldostérone",
+      "section_source": "HORMONES HUMAINES — CORTEX SURRÉNALIEN",
+      "definition": "Favorise la réabsorption rénale du sodium et l’excrétion du potassium, contribuant à la régulation de la volémie et de la pression artérielle.",
+      "abreviation": "—",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone stéroïde minéralocorticoïde",
+      "glande_ou_organe_producteur": "Cortex surrénalien, zone glomérulée",
+      "cellules_productrices": "Cellules de la zone glomérulée.",
+      "anomalies_associees": "Excès: hyperaldostéronisme, hypertension et parfois hypokaliémie; déficit: hypoaldostéronisme, hypotension et hyperkaliémie possibles."
+    },
+    {
+      "numero_source": 507,
+      "nom": "Déhydroépiandrostérone",
+      "section_source": "HORMONES HUMAINES — CORTEX SURRÉNALIEN",
+      "definition": "Précurseur stéroïdien pouvant être converti en androgènes et œstrogènes dans les tissus.",
+      "abreviation": "DHEA",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Stéroïde androgénique faible",
+      "glande_ou_organe_producteur": "Cortex surrénalien, zone réticulée",
+      "cellules_productrices": "Cellules de la zone réticulée.",
+      "anomalies_associees": "Taux élevés possibles dans certaines hyperplasies ou tumeurs surrénaliennes; interpréter avec l’âge, le sexe et les autres androgènes."
+    },
+    {
+      "numero_source": 508,
+      "nom": "Sulfate de déhydroépiandrostérone",
+      "section_source": "HORMONES HUMAINES — CORTEX SURRÉNALIEN",
+      "definition": "Forme sulfatée circulante de DHEA, utile comme indicateur de la production androgénique surrénalienne.",
+      "abreviation": "DHEA-S",
+      "synonymes": [
+        "Sulfate de DHEA"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Stéroïde sulfaté",
+      "glande_ou_organe_producteur": "Principalement cortex surrénalien",
+      "cellules_productrices": "Cellules de la zone réticulée.",
+      "anomalies_associees": "Valeurs élevées peuvent orienter vers une origine surrénalienne d’un excès d’androgènes; valeurs basses augmentent avec l’âge et peuvent être non spécifiques."
+    },
+    {
+      "numero_source": 509,
+      "nom": "Androstènedione",
+      "section_source": "HORMONES HUMAINES — CORTEX SURRÉNALIEN",
+      "definition": "Précurseur des hormones sexuelles, converti en testostérone et en œstrogènes.",
+      "abreviation": "A4",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Stéroïde androgénique",
+      "glande_ou_organe_producteur": "Surrénales et gonades",
+      "cellules_productrices": "Cellules stéroïdogènes surrénaliennes, ovariennes et testiculaires.",
+      "anomalies_associees": "Excès possible dans le syndrome des ovaires polykystiques, l’hyperplasie congénitale des surrénales ou certaines tumeurs."
+    },
+    {
+      "numero_source": 510,
+      "nom": "Adrénaline",
+      "section_source": "HORMONES HUMAINES — MÉDULLOSURRÉNALE",
+      "definition": "Catécholamine qui prépare l’organisme à une réaction rapide, augmentant notamment fréquence cardiaque et disponibilité du glucose.",
+      "abreviation": "EPI",
+      "synonymes": [
+        "Épinéphrine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Catécholamine",
+      "glande_ou_organe_producteur": "Médullosurrénale",
+      "cellules_productrices": "Cellules chromaffines.",
+      "anomalies_associees": "Excès par phéochromocytome possible: crises de céphalées, sueurs, palpitations et hypertension; taux influencés par stress et médicaments."
+    },
+    {
+      "numero_source": 511,
+      "nom": "Noradrénaline",
+      "section_source": "HORMONES HUMAINES — MÉDULLOSURRÉNALE",
+      "definition": "Catécholamine agissant comme neurotransmetteur et hormone, impliquée dans la vasoconstriction et la pression artérielle.",
+      "abreviation": "NE; NA",
+      "synonymes": [
+        "Norépinéphrine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Catécholamine",
+      "glande_ou_organe_producteur": "Médullosurrénale et neurones sympathiques",
+      "cellules_productrices": "Cellules chromaffines et neurones noradrénergiques.",
+      "anomalies_associees": "Excès possible dans certains phéochromocytomes/paragangliomes; l’interprétation dépend des métanéphrines et des conditions de prélèvement."
+    },
+    {
+      "numero_source": 512,
+      "nom": "Œstradiol",
+      "section_source": "HORMONES HUMAINES — OVAIRES",
+      "definition": "Principal œstrogène actif durant les années reproductives; participe au cycle menstruel, aux caractères sexuels et à la santé osseuse.",
+      "abreviation": "E2",
+      "synonymes": [
+        "17β-œstradiol"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone stéroïde",
+      "glande_ou_organe_producteur": "Ovaires; placenta pendant la grossesse; conversion périphérique",
+      "cellules_productrices": "Cellules de la granulosa après aromatisation des androgènes.",
+      "anomalies_associees": "Taux bas ou élevés selon l’âge et le contexte; anomalies associées à troubles menstruels, insuffisance ovarienne ou certaines tumeurs."
+    },
+    {
+      "numero_source": 513,
+      "nom": "Œstrone",
+      "section_source": "HORMONES HUMAINES — OVAIRES",
+      "definition": "Œstrogène important notamment après la ménopause, issu en partie de la conversion périphérique des androgènes.",
+      "abreviation": "E1",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone stéroïde",
+      "glande_ou_organe_producteur": "Ovaires et tissus périphériques, notamment tissu adipeux",
+      "cellules_productrices": "Cellules stéroïdogènes et cellules exprimant l’aromatase.",
+      "anomalies_associees": "Variations liées à l’âge et à l’état hormonal; un excès doit être interprété selon le contexte clinique."
+    },
+    {
+      "numero_source": 514,
+      "nom": "Œstriol",
+      "section_source": "HORMONES HUMAINES — OVAIRES",
+      "definition": "Œstrogène particulièrement important pendant la grossesse, produit en grande partie par l’unité fœto-placentaire.",
+      "abreviation": "E3",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone stéroïde",
+      "glande_ou_organe_producteur": "Principalement placenta pendant la grossesse",
+      "cellules_productrices": "Trophoblaste avec précurseurs provenant du fœtus.",
+      "anomalies_associees": "L’œstriol non conjugué peut faire partie de certains dépistages prénataux; il ne se suffit pas à lui-même pour diagnostiquer une anomalie fœtale."
+    },
+    {
+      "numero_source": 515,
+      "nom": "Progestérone ovarienne",
+      "section_source": "HORMONES HUMAINES — OVAIRES",
+      "definition": "Prépare l’endomètre à une éventuelle grossesse et contribue au maintien de la grossesse précoce.",
+      "abreviation": "P4",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone stéroïde",
+      "glande_ou_organe_producteur": "Ovaires; placenta pendant la grossesse",
+      "cellules_productrices": "Cellules lutéales du corps jaune.",
+      "anomalies_associees": "Déficit relatif ou sécrétion inadéquate peut être associé à des troubles ovulatoires; l’interprétation dépend du moment du cycle et de la grossesse."
+    },
+    {
+      "numero_source": 516,
+      "nom": "Inhibine A",
+      "section_source": "HORMONES HUMAINES — OVAIRES",
+      "definition": "Inhibe la sécrétion hypophysaire de FSH; participe à la régulation de la fonction gonadique.",
+      "abreviation": "INH-A",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine dimérique",
+      "glande_ou_organe_producteur": "Ovaires; placenta pendant la grossesse",
+      "cellules_productrices": "Cellules de la granulosa et cellules lutéales; trophoblaste placentaire.",
+      "anomalies_associees": "Utilisée dans certains dépistages prénataux et évaluations ovariennes; les variations sont interprétées avec d’autres marqueurs."
+    },
+    {
+      "numero_source": 517,
+      "nom": "Inhibine B ovarienne",
+      "section_source": "HORMONES HUMAINES — OVAIRES",
+      "definition": "Freine la sécrétion de FSH et reflète certaines fonctions folliculaires ovariennes.",
+      "abreviation": "INH-B",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine dimérique",
+      "glande_ou_organe_producteur": "Ovaires",
+      "cellules_productrices": "Cellules de la granulosa des follicules.",
+      "anomalies_associees": "Une concentration basse peut accompagner une diminution de la réserve ovarienne, sans constituer seule un diagnostic définitif."
+    },
+    {
+      "numero_source": 518,
+      "nom": "Activine",
+      "section_source": "HORMONES HUMAINES — OVAIRES",
+      "definition": "Protéine de signalisation de la famille TGF-β qui stimule notamment la sécrétion de FSH et agit sur plusieurs tissus.",
+      "abreviation": "—",
+      "synonymes": [
+        "Activine A/B selon la forme"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine dimérique",
+      "glande_ou_organe_producteur": "Gonades, hypophyse et divers tissus",
+      "cellules_productrices": "Cellules gonadiques, hypophysaires et autres cellules selon le tissu.",
+      "anomalies_associees": "Aucune maladie clinique courante n’est définie par un dosage isolé d’activine; des dérégulations sont étudiées dans plusieurs pathologies."
+    },
+    {
+      "numero_source": 519,
+      "nom": "Relaxine ovarienne",
+      "section_source": "HORMONES HUMAINES — OVAIRES",
+      "definition": "Participe à l’adaptation reproductive et peut influencer le tissu conjonctif et les fonctions vasculaires.",
+      "abreviation": "RLN",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone peptidique",
+      "glande_ou_organe_producteur": "Corps jaune ovarien; placenta selon la grossesse",
+      "cellules_productrices": "Cellules lutéales et tissus reproducteurs selon le contexte.",
+      "anomalies_associees": "Pas de syndrome courant défini par un déficit isolé; les rôles varient selon le stade reproductif."
+    },
+    {
+      "numero_source": 520,
+      "nom": "Hormone antimüllérienne ovarienne",
+      "section_source": "HORMONES HUMAINES — OVAIRES",
+      "definition": "Produit par les follicules ovariens, elle participe à la régulation du recrutement folliculaire et sert de marqueur indirect de réserve ovarienne.",
+      "abreviation": "AMH",
+      "synonymes": [
+        "Hormone anti-müllérienne"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine de la famille TGF-β",
+      "glande_ou_organe_producteur": "Ovaires",
+      "cellules_productrices": "Cellules de la granulosa des follicules préantraux et petits follicules antraux.",
+      "anomalies_associees": "AMH basse peut être associée à une réserve ovarienne diminuée; AMH élevée peut se voir notamment dans le SOPK, sans suffire à le diagnostiquer."
+    },
+    {
+      "numero_source": 521,
+      "nom": "Testostérone",
+      "section_source": "HORMONES HUMAINES — TESTICULES",
+      "definition": "Androgène majeur impliqué dans le développement sexuel masculin, la fonction reproductive, la masse musculaire et l’os.",
+      "abreviation": "T",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone stéroïde",
+      "glande_ou_organe_producteur": "Testicules; faibles quantités par surrénales et tissus périphériques",
+      "cellules_productrices": "Cellules de Leydig dans les testicules.",
+      "anomalies_associees": "Déficit: hypogonadisme; excès ou exposition excessive aux androgènes: acné, hirsutisme ou virilisation selon le contexte."
+    },
+    {
+      "numero_source": 522,
+      "nom": "Dihydrotestostérone",
+      "section_source": "HORMONES HUMAINES — TESTICULES",
+      "definition": "Androgène puissant formé à partir de la testostérone par la 5α-réductase; important pour certains tissus génitaux et les follicules pileux.",
+      "abreviation": "DHT",
+      "synonymes": [
+        "5α-dihydrotestostérone"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone stéroïde",
+      "glande_ou_organe_producteur": "Formation périphérique à partir de la testostérone, notamment peau et prostate",
+      "cellules_productrices": "Cellules exprimant la 5α-réductase.",
+      "anomalies_associees": "Une action excessive participe à l’alopécie androgénétique et à l’hyperplasie prostatique; une anomalie du récepteur peut altérer le développement sexuel."
+    },
+    {
+      "numero_source": 523,
+      "nom": "Inhibine B testiculaire",
+      "section_source": "HORMONES HUMAINES — TESTICULES",
+      "definition": "Inhibe la sécrétion de FSH et reflète en partie l’activité des cellules de Sertoli et la spermatogenèse.",
+      "abreviation": "INH-B",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine dimérique",
+      "glande_ou_organe_producteur": "Testicules",
+      "cellules_productrices": "Cellules de Sertoli.",
+      "anomalies_associees": "Taux bas peut être associé à une spermatogenèse altérée; l’évaluation de fertilité nécessite un spermogramme et le contexte clinique."
+    },
+    {
+      "numero_source": 524,
+      "nom": "Hormone antimüllérienne testiculaire",
+      "section_source": "HORMONES HUMAINES — TESTICULES",
+      "definition": "Pendant le développement fœtal masculin, entraîne la régression des canaux de Müller.",
+      "abreviation": "AMH",
+      "synonymes": [
+        "Facteur inhibiteur müllérien"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine de la famille TGF-β",
+      "glande_ou_organe_producteur": "Testicules fœtaux et cellules de Sertoli avant et pendant l’enfance",
+      "cellules_productrices": "Cellules de Sertoli.",
+      "anomalies_associees": "Défaut de production ou d’action peut entraîner la persistance des structures müllériennes; l’interprétation dépend de l’âge et du développement sexuel."
+    },
+    {
+      "numero_source": 525,
+      "nom": "Gonadotrophine chorionique humaine",
+      "section_source": "HORMONES HUMAINES — PLACENTA",
+      "definition": "Hormone de grossesse qui maintient le corps jaune au début de la gestation et soutient la production de progestérone.",
+      "abreviation": "hCG",
+      "synonymes": [
+        "Gonadotrophine chorionique"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine",
+      "glande_ou_organe_producteur": "Placenta",
+      "cellules_productrices": "Syncytiotrophoblaste.",
+      "anomalies_associees": "Taux anormaux peuvent être observés dans une grossesse extra-utérine, une grossesse non évolutive ou certaines maladies trophoblastiques; interpréter en série et avec l’échographie."
+    },
+    {
+      "numero_source": 526,
+      "nom": "Lactogène placentaire humain",
+      "section_source": "HORMONES HUMAINES — PLACENTA",
+      "definition": "Hormone placentaire qui modifie le métabolisme maternel et contribue à l’adaptation à la grossesse.",
+      "abreviation": "hPL",
+      "synonymes": [
+        "Somatomammotrophine chorionique humaine",
+        "hCS"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone protéique",
+      "glande_ou_organe_producteur": "Placenta",
+      "cellules_productrices": "Syncytiotrophoblaste.",
+      "anomalies_associees": "Il n’existe pas d’usage diagnostique courant fondé sur son dosage isolé; les anomalies placentaires se jugent avec le contexte obstétrical."
+    },
+    {
+      "numero_source": 527,
+      "nom": "Hormone de croissance placentaire",
+      "section_source": "HORMONES HUMAINES — PLACENTA",
+      "definition": "Variante de l’hormone de croissance produite par le placenta, participant aux adaptations métaboliques maternelles.",
+      "abreviation": "PGH",
+      "synonymes": [
+        "GH-V",
+        "hormone de croissance variante"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine apparentée à GH",
+      "glande_ou_organe_producteur": "Placenta",
+      "cellules_productrices": "Syncytiotrophoblaste.",
+      "anomalies_associees": "Pas de maladie courante définie par un dosage isolé; les perturbations sont étudiées dans les complications de grossesse."
+    },
+    {
+      "numero_source": 528,
+      "nom": "Progestérone placentaire",
+      "section_source": "HORMONES HUMAINES — PLACENTA",
+      "definition": "Hormone stéroïde placentaire qui contribue au maintien de l’endomètre et de la grossesse.",
+      "abreviation": "P4",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone stéroïde",
+      "glande_ou_organe_producteur": "Placenta, surtout après le relais lutéo-placentaire",
+      "cellules_productrices": "Syncytiotrophoblaste.",
+      "anomalies_associees": "Une grossesse à risque ne peut pas être évaluée par un seul dosage sans tenir compte du terme et du contexte clinique."
+    },
+    {
+      "numero_source": 529,
+      "nom": "Œstrogènes placentaires",
+      "section_source": "HORMONES HUMAINES — PLACENTA",
+      "definition": "Œstrogènes produits pendant la grossesse à partir de précurseurs maternels et fœtaux; ils soutiennent les adaptations gestationnelles.",
+      "abreviation": "E1; E2; E3",
+      "synonymes": [
+        "Œstrogènes de grossesse"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormones stéroïdes",
+      "glande_ou_organe_producteur": "Unité fœto-placentaire",
+      "cellules_productrices": "Trophoblaste, utilisant notamment des précurseurs surrénaliens fœtaux.",
+      "anomalies_associees": "Leur interprétation dépend du terme; les anomalies isolées ne permettent pas de conclure à une pathologie précise."
+    },
+    {
+      "numero_source": 530,
+      "nom": "Relaxine placentaire",
+      "section_source": "HORMONES HUMAINES — PLACENTA",
+      "definition": "Peptide impliqué dans l’adaptation cardiovasculaire et les tissus reproducteurs pendant la grossesse, selon l’espèce et le contexte.",
+      "abreviation": "RLN",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Hormone peptidique",
+      "glande_ou_organe_producteur": "Placenta et tissus reproducteurs selon le stade gestationnel",
+      "cellules_productrices": "Trophoblaste et cellules reproductrices selon la forme.",
+      "anomalies_associees": "Pas de syndrome clinique courant diagnostiqué par un dosage isolé de relaxine."
+    },
+    {
+      "numero_source": 531,
+      "nom": "Mélatonine",
+      "section_source": "HORMONES HUMAINES — GLANDE PINÉALE",
+      "definition": "Hormone qui synchronise les rythmes circadiens et contribue à la régulation du cycle veille-sommeil.",
+      "abreviation": "MLT",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Amine dérivée du tryptophane",
+      "glande_ou_organe_producteur": "Glande pinéale; aussi produite localement dans d’autres tissus",
+      "cellules_productrices": "Pinéalocytes.",
+      "anomalies_associees": "Une sécrétion ou un rythme perturbé peut être associé à des troubles du sommeil et du rythme circadien, sans être leur seule cause."
+    },
+    {
+      "numero_source": 532,
+      "nom": "Érythropoïétine",
+      "section_source": "HORMONES HUMAINES — REINS",
+      "definition": "Stimule la production des globules rouges dans la moelle osseuse en réponse notamment à l’hypoxie.",
+      "abreviation": "EPO",
+      "synonymes": [
+        "Époétine (médicaments apparentés)"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine",
+      "glande_ou_organe_producteur": "Reins principalement; foie surtout chez le fœtus",
+      "cellules_productrices": "Cellules interstitielles péritubulaires rénales.",
+      "anomalies_associees": "Déficit relatif dans l’insuffisance rénale: anémie; production excessive: érythrocytose possible selon la cause."
+    },
+    {
+      "numero_source": 533,
+      "nom": "Rénine",
+      "section_source": "HORMONES HUMAINES — REINS",
+      "definition": "Enzyme-hormone qui initie le système rénine-angiotensine-aldostérone en clivant l’angiotensinogène.",
+      "abreviation": "REN",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéase aspartique",
+      "glande_ou_organe_producteur": "Reins",
+      "cellules_productrices": "Cellules juxtaglomérulaires.",
+      "anomalies_associees": "Une activité élevée ou basse peut participer à certains troubles de pression artérielle et d’équilibre hydro-électrolytique; à interpréter avec aldostérone et médicaments."
+    },
+    {
+      "numero_source": 534,
+      "nom": "Calcitriol",
+      "section_source": "HORMONES HUMAINES — REINS",
+      "definition": "Forme hormonale active de la vitamine D qui augmente l’absorption intestinale du calcium et du phosphate.",
+      "abreviation": "1,25-(OH)₂-D₃",
+      "synonymes": [
+        "1,25-dihydroxyvitamine D"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Secostéroïde",
+      "glande_ou_organe_producteur": "Reins par activation de la 25-OH-vitamine D",
+      "cellules_productrices": "Cellules tubulaires proximales rénales.",
+      "anomalies_associees": "Déficit d’action: troubles de minéralisation osseuse et hypocalcémie possibles; excès: hypercalcémie, selon la cause."
+    },
+    {
+      "numero_source": 535,
+      "nom": "Peptide natriurétique auriculaire",
+      "section_source": "HORMONES HUMAINES — CŒUR",
+      "definition": "Favorise l’excrétion rénale de sodium et d’eau et contribue à réduire la volémie et la pression artérielle.",
+      "abreviation": "ANP",
+      "synonymes": [
+        "Facteur natriurétique auriculaire"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Cœur, surtout oreillettes",
+      "cellules_productrices": "Cardiomyocytes auriculaires.",
+      "anomalies_associees": "Sa sécrétion augmente lors de l’étirement auriculaire; ce n’est pas un marqueur de routine aussi utilisé que le BNP/NT-proBNP en insuffisance cardiaque."
+    },
+    {
+      "numero_source": 536,
+      "nom": "Peptide natriurétique de type B",
+      "section_source": "HORMONES HUMAINES — CŒUR",
+      "definition": "Favorise la natriurèse et la vasodilatation; sa concentration augmente notamment lors de l’étirement des ventricules.",
+      "abreviation": "BNP",
+      "synonymes": [
+        "BNP",
+        "peptide natriurétique cérébral (nom historique)"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Cœur, surtout ventricules",
+      "cellules_productrices": "Cardiomyocytes ventriculaires.",
+      "anomalies_associees": "BNP ou NT-proBNP élevés peuvent soutenir le diagnostic d’insuffisance cardiaque, mais doivent être interprétés avec l’âge, les reins et le contexte clinique."
+    },
+    {
+      "numero_source": 537,
+      "nom": "Facteur de croissance analogue à l’insuline 1",
+      "section_source": "HORMONES HUMAINES — FOIE",
+      "definition": "Médiateur de nombreux effets de la GH, notamment la croissance des os et des tissus.",
+      "abreviation": "IGF-1",
+      "synonymes": [
+        "Somatomédine C"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine",
+      "glande_ou_organe_producteur": "Foie principalement; production locale dans de nombreux tissus",
+      "cellules_productrices": "Hépatocytes et cellules de plusieurs tissus.",
+      "anomalies_associees": "Bas: déficit en GH, dénutrition ou maladie chronique possibles; élevé: acromégalie possible, à confirmer par examens appropriés."
+    },
+    {
+      "numero_source": 538,
+      "nom": "Angiotensinogène",
+      "section_source": "HORMONES HUMAINES — FOIE",
+      "definition": "Précurseur protéique clivé par la rénine pour former l’angiotensine I dans le système de régulation de la pression artérielle.",
+      "abreviation": "AGT",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine",
+      "glande_ou_organe_producteur": "Foie principalement",
+      "cellules_productrices": "Hépatocytes.",
+      "anomalies_associees": "Les variations peuvent influencer le système rénine-angiotensine; ce précurseur n’est pas classiquement considéré comme une hormone active."
+    },
+    {
+      "numero_source": 539,
+      "nom": "Thrombopoïétine",
+      "section_source": "HORMONES HUMAINES — FOIE",
+      "definition": "Stimule la production et la maturation des mégacaryocytes et contribue à la production des plaquettes.",
+      "abreviation": "TPO",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine",
+      "glande_ou_organe_producteur": "Foie principalement; reins et autres tissus contribuent",
+      "cellules_productrices": "Hépatocytes et cellules de certains tissus.",
+      "anomalies_associees": "Une anomalie de production ou de signalisation peut contribuer à une thrombopénie ou une thrombocytose selon le mécanisme."
+    },
+    {
+      "numero_source": 540,
+      "nom": "Hepcidine",
+      "section_source": "HORMONES HUMAINES — FOIE",
+      "definition": "Hormone peptidique hépatique qui limite l’absorption intestinale et la libération du fer en régulant la ferroportine.",
+      "abreviation": "HAMP",
+      "synonymes": [
+        "Hepcidine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Foie",
+      "cellules_productrices": "Hépatocytes.",
+      "anomalies_associees": "Excès: anémie inflammatoire et restriction du fer; déficit: surcharge en fer dans certaines maladies héréditaires."
+    },
+    {
+      "numero_source": 541,
+      "nom": "Gastrine",
+      "section_source": "HORMONES HUMAINES — ESTOMAC",
+      "definition": "Stimule la sécrétion d’acide gastrique et contribue à la croissance de la muqueuse gastrique.",
+      "abreviation": "GAST",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Estomac principalement; duodénum en moindre quantité",
+      "cellules_productrices": "Cellules G de l’antre gastrique et du duodénum.",
+      "anomalies_associees": "Excès: syndrome de Zollinger-Ellison avec hyperacidité et ulcères; gastrine élevée aussi en cas d’hypochlorhydrie ou sous certains traitements."
+    },
+    {
+      "numero_source": 542,
+      "nom": "Ghréline",
+      "section_source": "HORMONES HUMAINES — ESTOMAC",
+      "definition": "Hormone digestive qui stimule l’appétit et participe à la régulation de la sécrétion de GH et de l’équilibre énergétique.",
+      "abreviation": "GHRL",
+      "synonymes": [
+        "Lenomoreline"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide acylé",
+      "glande_ou_organe_producteur": "Estomac principalement",
+      "cellules_productrices": "Cellules X/A-like de la muqueuse gastrique.",
+      "anomalies_associees": "Les taux varient avec le jeûne, l’alimentation et l’état nutritionnel; pas de maladie courante diagnostiquée sur un dosage isolé."
+    },
+    {
+      "numero_source": 543,
+      "nom": "Somatostatine digestive",
+      "section_source": "HORMONES HUMAINES — ESTOMAC",
+      "definition": "Inhibe localement plusieurs sécrétions digestives, dont la gastrine et certaines sécrétions pancréatiques.",
+      "abreviation": "SST",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Estomac, intestin et pancréas",
+      "cellules_productrices": "Cellules D/delta du tube digestif et du pancréas.",
+      "anomalies_associees": "Les tumeurs sécrétantes peuvent provoquer un somatostatinome; les analogues peuvent causer des effets digestifs et biliaires."
+    },
+    {
+      "numero_source": 544,
+      "nom": "Sécrétine",
+      "section_source": "HORMONES HUMAINES — INTESTIN GRÊLE",
+      "definition": "Stimule la sécrétion de bicarbonate pancréatique et biliaire pour neutraliser l’acidité du contenu duodénal.",
+      "abreviation": "SCT",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Duodénum et intestin grêle proximal",
+      "cellules_productrices": "Cellules S intestinales.",
+      "anomalies_associees": "Aucune anomalie hormonale isolée couramment diagnostiquée; la sécrétine est aussi utilisée dans certains tests spécialisés."
+    },
+    {
+      "numero_source": 545,
+      "nom": "Cholécystokinine",
+      "section_source": "HORMONES HUMAINES — INTESTIN GRÊLE",
+      "definition": "Stimule la contraction de la vésicule biliaire, la sécrétion d’enzymes pancréatiques et contribue à la satiété.",
+      "abreviation": "CCK",
+      "synonymes": [
+        "Pancréozymine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Duodénum et jéjunum",
+      "cellules_productrices": "Cellules I de l’intestin grêle.",
+      "anomalies_associees": "Pas de syndrome clinique courant défini par un dosage isolé; troubles de la voie biliaire ou pancréatique s’évaluent autrement."
+    },
+    {
+      "numero_source": 546,
+      "nom": "Peptide insulinotrope dépendant du glucose",
+      "section_source": "HORMONES HUMAINES — INTESTIN GRÊLE",
+      "definition": "Incrétine libérée après un repas; stimule la sécrétion d’insuline de manière dépendante du glucose.",
+      "abreviation": "GIP",
+      "synonymes": [
+        "Polypeptide insulinotrope glucose-dépendant"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Duodénum et jéjunum",
+      "cellules_productrices": "Cellules K intestinales.",
+      "anomalies_associees": "Pas de maladie courante diagnostiquée par dosage isolé; la voie GIP est une cible thérapeutique dans le diabète et l’obésité."
+    },
+    {
+      "numero_source": 547,
+      "nom": "Peptide-1 apparenté au glucagon",
+      "section_source": "HORMONES HUMAINES — INTESTIN GRÊLE",
+      "definition": "Incrétine qui stimule l’insuline lorsque le glucose est élevé, inhibe le glucagon et ralentit la vidange gastrique.",
+      "abreviation": "GLP-1",
+      "synonymes": [
+        "Glucagon-like peptide-1"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide dérivé du proglucagon",
+      "glande_ou_organe_producteur": "Intestin distal; également neurones du tronc cérébral",
+      "cellules_productrices": "Cellules L intestinales et certains neurones.",
+      "anomalies_associees": "La voie GLP-1 est ciblée par des médicaments du diabète de type 2 et de l’obésité; les analogues peuvent provoquer des effets digestifs."
+    },
+    {
+      "numero_source": 548,
+      "nom": "Peptide-2 apparenté au glucagon",
+      "section_source": "HORMONES HUMAINES — INTESTIN GRÊLE",
+      "definition": "Hormone intestinale qui favorise la trophicité et la fonction de la muqueuse intestinale.",
+      "abreviation": "GLP-2",
+      "synonymes": [
+        "Glucagon-like peptide-2"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide dérivé du proglucagon",
+      "glande_ou_organe_producteur": "Intestin",
+      "cellules_productrices": "Cellules L intestinales.",
+      "anomalies_associees": "Une insuffisance intestinale peut être traitée dans des indications spécialisées par un analogue du GLP-2; ce n’est pas une anomalie courante diagnostiquée par dosage."
+    },
+    {
+      "numero_source": 549,
+      "nom": "Motiline",
+      "section_source": "HORMONES HUMAINES — INTESTIN GRÊLE",
+      "definition": "Participe au complexe moteur migrant qui organise les contractions digestives pendant le jeûne.",
+      "abreviation": "MLN",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Intestin grêle proximal",
+      "cellules_productrices": "Cellules endocrines M du duodénum et du jéjunum.",
+      "anomalies_associees": "Pas de maladie courante établie sur le seul dosage; la motricité digestive dépend de nombreux mécanismes."
+    },
+    {
+      "numero_source": 550,
+      "nom": "Peptide YY",
+      "section_source": "HORMONES HUMAINES — INTESTIN GRÊLE",
+      "definition": "Hormone intestinale qui contribue à la satiété et ralentit certaines fonctions digestives après les repas.",
+      "abreviation": "PYY",
+      "synonymes": [
+        "PYY"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Iléon et côlon principalement",
+      "cellules_productrices": "Cellules L intestinales.",
+      "anomalies_associees": "Pas de syndrome clinique courant défini par un déficit ou un excès isolé; les taux varient selon les repas et l’état métabolique."
+    },
+    {
+      "numero_source": 551,
+      "nom": "Oxyntomoduline",
+      "section_source": "HORMONES HUMAINES — INTESTIN GRÊLE",
+      "definition": "Peptide dérivé du proglucagon qui participe à la satiété et module certaines fonctions digestives et métaboliques.",
+      "abreviation": "OXM",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Intestin",
+      "cellules_productrices": "Cellules L intestinales.",
+      "anomalies_associees": "Aucune maladie clinique courante n’est définie par son dosage isolé; son rôle thérapeutique est encore étudié."
+    },
+    {
+      "numero_source": 552,
+      "nom": "Neurotensine",
+      "section_source": "HORMONES HUMAINES — INTESTIN GRÊLE",
+      "definition": "Peptide impliqué dans la motricité digestive, la sécrétion et plusieurs voies nerveuses.",
+      "abreviation": "NTS",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Intestin grêle et système nerveux central",
+      "cellules_productrices": "Cellules N intestinales et neurones spécifiques.",
+      "anomalies_associees": "Pas de syndrome endocrinien courant diagnostiqué sur un dosage isolé; rôle étudié dans plusieurs maladies digestives et neurologiques."
+    },
+    {
+      "numero_source": 553,
+      "nom": "Leptine",
+      "section_source": "HORMONES HUMAINES — TISSU ADIPEUX",
+      "definition": "Signale au cerveau l’état des réserves énergétiques et participe à la régulation de la faim et de la reproduction.",
+      "abreviation": "LEP",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine",
+      "glande_ou_organe_producteur": "Tissu adipeux blanc principalement",
+      "cellules_productrices": "Adipocytes.",
+      "anomalies_associees": "Déficit congénital rare: hyperphagie et obésité sévère; résistance à la leptine fréquente dans l’obésité commune."
+    },
+    {
+      "numero_source": 554,
+      "nom": "Adiponectine",
+      "section_source": "HORMONES HUMAINES — TISSU ADIPEUX",
+      "definition": "Adipokine participant à la sensibilité à l’insuline et au métabolisme des lipides.",
+      "abreviation": "ADIPOQ",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine",
+      "glande_ou_organe_producteur": "Tissu adipeux",
+      "cellules_productrices": "Adipocytes.",
+      "anomalies_associees": "Des taux bas sont associés à la résistance à l’insuline et au risque métabolique, sans constituer à eux seuls un diagnostic."
+    },
+    {
+      "numero_source": 555,
+      "nom": "Résistine",
+      "section_source": "HORMONES HUMAINES — TISSU ADIPEUX",
+      "definition": "Adipokine impliquée dans des voies inflammatoires et métaboliques; son rôle chez l’humain est moins établi que chez les rongeurs.",
+      "abreviation": "RETN",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine",
+      "glande_ou_organe_producteur": "Chez l’humain, surtout cellules immunitaires; aussi tissu adipeux selon le contexte",
+      "cellules_productrices": "Monocytes/macrophages et autres cellules selon le tissu.",
+      "anomalies_associees": "Pas de trouble clinique courant défini par un dosage isolé; rôle encore étudié dans l’inflammation et les maladies métaboliques."
+    },
+    {
+      "numero_source": 556,
+      "nom": "Facteur de croissance des fibroblastes 23",
+      "section_source": "HORMONES HUMAINES — OS",
+      "definition": "Hormone osseuse qui augmente l’excrétion rénale du phosphate et réduit la production de calcitriol.",
+      "abreviation": "FGF23",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine",
+      "glande_ou_organe_producteur": "Os",
+      "cellules_productrices": "Ostéocytes et ostéoblastes.",
+      "anomalies_associees": "Excès: hypophosphatémie et rachitisme/ostéomalacie hypophosphatémique; déficit ou résistance: hyperphosphatémie et calcifications possibles."
+    },
+    {
+      "numero_source": 557,
+      "nom": "Ostéocalcine",
+      "section_source": "HORMONES HUMAINES — OS",
+      "definition": "Protéine produite par les ostéoblastes, impliquée dans la matrice osseuse; son rôle hormonal systémique chez l’humain reste étudié.",
+      "abreviation": "BGLAP",
+      "synonymes": [
+        "Protéine Gla osseuse"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine non collagénique",
+      "glande_ou_organe_producteur": "Os",
+      "cellules_productrices": "Ostéoblastes.",
+      "anomalies_associees": "Marqueur du remodelage osseux dans certains contextes; aucune maladie endocrine courante n’est définie par son seul dosage."
+    },
+    {
+      "numero_source": 558,
+      "nom": "Sclérostine",
+      "section_source": "HORMONES HUMAINES — OS",
+      "definition": "Protéine des ostéocytes qui inhibe la voie Wnt et freine la formation osseuse.",
+      "abreviation": "SOST",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Glycoprotéine",
+      "glande_ou_organe_producteur": "Os",
+      "cellules_productrices": "Ostéocytes.",
+      "anomalies_associees": "Déficit génétique rare: sclérostéose ou maladie de Van Buchem avec densité osseuse élevée; excès d’activité peut freiner la formation osseuse."
+    },
+    {
+      "numero_source": 559,
+      "nom": "Thymosine",
+      "section_source": "HORMONES HUMAINES — THYMUS",
+      "definition": "Nom utilisé pour plusieurs peptides thymiques étudiés dans la maturation immunitaire; il ne désigne pas une hormone unique parfaitement définie.",
+      "abreviation": "—",
+      "synonymes": [
+        "Thymosines, selon la forme"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptides selon la molécule",
+      "glande_ou_organe_producteur": "Thymus",
+      "cellules_productrices": "Cellules épithéliales thymiques pour plusieurs peptides.",
+      "anomalies_associees": "Aucune anomalie clinique unique ne peut être attribuée au terme général « thymosine » sans préciser la molécule."
+    },
+    {
+      "numero_source": 560,
+      "nom": "Thymopoïétine",
+      "section_source": "HORMONES HUMAINES — THYMUS",
+      "definition": "Protéine initialement décrite pour ses effets sur la différenciation des lymphocytes T; le terme désigne aussi une protéine nucléaire distincte dans la nomenclature moderne.",
+      "abreviation": "TMPO",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine",
+      "glande_ou_organe_producteur": "Thymus pour l’activité thymique historique; expression plus large pour TMPO nucléaire",
+      "cellules_productrices": "Cellules thymiques selon la fonction décrite.",
+      "anomalies_associees": "Pas de syndrome endocrinien courant défini par un dosage de thymopoïétine; préciser la molécule concernée est essentiel."
+    },
+    {
+      "numero_source": 561,
+      "nom": "Thymuline",
+      "section_source": "HORMONES HUMAINES — THYMUS",
+      "definition": "Peptide thymique dépendant du zinc, étudié dans la maturation et la fonction des lymphocytes T.",
+      "abreviation": "—",
+      "synonymes": [
+        "Facteur thymique sérique"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Thymus",
+      "cellules_productrices": "Cellules épithéliales thymiques.",
+      "anomalies_associees": "Pas de maladie courante diagnostiquée par dosage isolé; les troubles immunitaires nécessitent une évaluation globale."
+    },
+    {
+      "numero_source": 562,
+      "nom": "Endothéline",
+      "section_source": "HORMONES HUMAINES — VAISSEAUX SANGUINS ET ENDOTHÉLIUM",
+      "definition": "Peptide vasoconstricteur puissant qui participe à la régulation du tonus vasculaire.",
+      "abreviation": "ET-1 principalement",
+      "synonymes": [
+        "Endothéline-1 (forme majeure)"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Endothélium vasculaire; autres tissus",
+      "cellules_productrices": "Cellules endothéliales et cellules musculaires lisses selon l’isoforme.",
+      "anomalies_associees": "Une activité accrue est impliquée dans certaines maladies vasculaires, notamment l’hypertension artérielle pulmonaire; pas de diagnostic fondé sur un dosage isolé de routine."
+    },
+    {
+      "numero_source": 563,
+      "nom": "Prostacycline",
+      "section_source": "HORMONES HUMAINES — VAISSEAUX SANGUINS ET ENDOTHÉLIUM",
+      "definition": "Médiateur lipidique vasodilatateur qui inhibe l’agrégation plaquettaire.",
+      "abreviation": "PGI2",
+      "synonymes": [
+        "Prostaglandine I2"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Eicosanoïde dérivé de l’acide arachidonique",
+      "glande_ou_organe_producteur": "Endothélium vasculaire",
+      "cellules_productrices": "Cellules endothéliales.",
+      "anomalies_associees": "Une voie prostacycline altérée peut contribuer à des troubles vasculaires; les analogues sont utilisés notamment dans certaines hypertensions pulmonaires."
+    },
+    {
+      "numero_source": 564,
+      "nom": "Monoxyde d’azote",
+      "section_source": "HORMONES HUMAINES — VAISSEAUX SANGUINS ET ENDOTHÉLIUM",
+      "definition": "Molécule gazeuse de signalisation qui provoque notamment la relaxation du muscle lisse vasculaire.",
+      "abreviation": "NO",
+      "synonymes": [
+        "Oxyde nitrique"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Gaz de signalisation produit à partir de l’arginine",
+      "glande_ou_organe_producteur": "Endothélium, neurones et cellules immunitaires",
+      "cellules_productrices": "Cellules exprimant les différentes NO-synthases.",
+      "anomalies_associees": "Une disponibilité réduite est impliquée dans le dysfonctionnement endothélial; une production excessive peut contribuer à l’inflammation et à l’hypotension dans certains contextes."
+    },
+    {
+      "numero_source": 565,
+      "nom": "Dopamine (médiateur)",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Neurotransmetteur participant au contrôle moteur, à la motivation et à plusieurs fonctions autonomes; peut aussi agir comme médiateur périphérique.",
+      "abreviation": "DA",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Catécholamine",
+      "glande_ou_organe_producteur": "Système nerveux central et tissus périphériques",
+      "cellules_productrices": "Neurones dopaminergiques et cellules spécifiques selon le tissu.",
+      "anomalies_associees": "La dysfonction dopaminergique est impliquée dans la maladie de Parkinson et d’autres troubles; la dopamine n’est pas une hormone endocrine classique dans tous ses rôles."
+    },
+    {
+      "numero_source": 566,
+      "nom": "Sérotonine",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Médiateur impliqué dans la motricité digestive, l’humeur, le sommeil et la fonction plaquettaire.",
+      "abreviation": "5-HT",
+      "synonymes": [
+        "5-hydroxytryptamine"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Amine dérivée du tryptophane",
+      "glande_ou_organe_producteur": "Cellules entérochromaffines intestinales; neurones du raphé",
+      "cellules_productrices": "Cellules entérochromaffines et neurones sérotoninergiques.",
+      "anomalies_associees": "Un excès médicamenteux peut contribuer au syndrome sérotoninergique; les troubles de l’humeur ne s’expliquent pas par un simple dosage sanguin."
+    },
+    {
+      "numero_source": 567,
+      "nom": "Histamine",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Médiateur impliqué dans les réactions allergiques, la sécrétion d’acide gastrique et la neurotransmission.",
+      "abreviation": "HA",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Amine biogène dérivée de l’histidine",
+      "glande_ou_organe_producteur": "Mastocytes, basophiles, estomac et système nerveux",
+      "cellules_productrices": "Mastocytes, basophiles, cellules entérochromaffines-like et neurones histaminergiques.",
+      "anomalies_associees": "Libération excessive dans les réactions allergiques ou l’anaphylaxie; l’histamine n’est pas une hormone endocrine classique."
+    },
+    {
+      "numero_source": 568,
+      "nom": "Prostaglandines",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Famille de médiateurs lipidiques régulant inflammation, douleur, fièvre, fonction vasculaire et plusieurs fonctions reproductives.",
+      "abreviation": "PG",
+      "synonymes": [
+        "Famille PG"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Eicosanoïdes dérivés de l’acide arachidonique",
+      "glande_ou_organe_producteur": "Nombreux tissus",
+      "cellules_productrices": "Cellules exprimant les enzymes cyclo-oxygénases.",
+      "anomalies_associees": "Production excessive ou insuffisante impliquée dans divers processus inflammatoires et vasculaires; les AINS réduisent leur synthèse."
+    },
+    {
+      "numero_source": 569,
+      "nom": "Leucotriènes",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Médiateurs lipidiques impliqués dans l’inflammation, le recrutement cellulaire et la bronchoconstriction.",
+      "abreviation": "LT",
+      "synonymes": [
+        "Famille LT"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Eicosanoïdes issus de l’acide arachidonique via la lipoxygénase",
+      "glande_ou_organe_producteur": "Leucocytes et autres cellules inflammatoires",
+      "cellules_productrices": "Leucocytes, mastocytes et éosinophiles.",
+      "anomalies_associees": "Impliqués dans l’asthme et certaines réactions allergiques; les antagonistes des récepteurs des leucotriènes sont utilisés dans certaines indications respiratoires."
+    },
+    {
+      "numero_source": 570,
+      "nom": "Thromboxanes",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Médiateurs lipidiques, notamment le thromboxane A2, favorisant l’agrégation plaquettaire et la vasoconstriction.",
+      "abreviation": "TX",
+      "synonymes": [
+        "TXA2 notamment"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Eicosanoïdes",
+      "glande_ou_organe_producteur": "Plaquettes principalement",
+      "cellules_productrices": "Plaquettes activées.",
+      "anomalies_associees": "Une activité excessive peut favoriser la thrombose; l’aspirine réduit la synthèse plaquettaire de thromboxane A2."
+    },
+    {
+      "numero_source": 571,
+      "nom": "Bradykinine",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Peptide vasoactif provoquant vasodilatation, augmentation de la perméabilité vasculaire et participation à la douleur.",
+      "abreviation": "BK",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide issu du kininogène",
+      "glande_ou_organe_producteur": "Plasma et tissus via le système kallikréine-kinine",
+      "cellules_productrices": "Formée par clivage enzymatique du kininogène; pas une hormone d’une glande unique.",
+      "anomalies_associees": "Accumulation peut provoquer un angio-œdème, notamment sous inhibiteurs de l’enzyme de conversion; elle n’est pas une hormone endocrine classique."
+    },
+    {
+      "numero_source": 572,
+      "nom": "Angiotensine II",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Peptide actif du système rénine-angiotensine qui provoque vasoconstriction et stimule l’aldostérone, la soif et la rétention sodée.",
+      "abreviation": "Ang II",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Peptide",
+      "glande_ou_organe_producteur": "Formée dans le sang et les tissus à partir de l’angiotensine I",
+      "cellules_productrices": "Produit par clivage enzymatique via l’enzyme de conversion de l’angiotensine.",
+      "anomalies_associees": "Une activité excessive contribue à l’hypertension et à la rétention sodée; elle est ciblée par les IEC et les antagonistes des récepteurs de l’angiotensine."
+    },
+    {
+      "numero_source": 573,
+      "nom": "Facteur de croissance épidermique",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Facteur de croissance stimulant la prolifération, la survie et la réparation de certaines cellules épithéliales.",
+      "abreviation": "EGF",
+      "synonymes": [],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine",
+      "glande_ou_organe_producteur": "Nombreux tissus; notamment glandes salivaires et tissus épithéliaux",
+      "cellules_productrices": "Cellules épithéliales et autres cellules selon le tissu.",
+      "anomalies_associees": "La signalisation EGF/EGFR est dérégulée dans plusieurs cancers; ce n’est pas une hormone endocrine classique."
+    },
+    {
+      "numero_source": 574,
+      "nom": "Facteur de croissance transformant bêta",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Famille de cytokines régulant croissance cellulaire, différenciation, immunité et formation de matrice extracellulaire.",
+      "abreviation": "TGF-β",
+      "synonymes": [
+        "Transforming growth factor beta"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine dimérique",
+      "glande_ou_organe_producteur": "Nombreux tissus",
+      "cellules_productrices": "Cellules immunitaires, épithéliales, stromales et autres.",
+      "anomalies_associees": "Dérégulation impliquée dans la fibrose, l’inflammation et le cancer; ce n’est pas une hormone endocrine classique."
+    },
+    {
+      "numero_source": 575,
+      "nom": "Facteur de croissance endothélial vasculaire",
+      "section_source": "HORMONES HUMAINES — AUTRES MÉDIATEURS À RÉPERTORIER SÉPARÉMENT",
+      "definition": "Facteur de croissance stimulant la formation de vaisseaux sanguins et la perméabilité vasculaire.",
+      "abreviation": "VEGF",
+      "synonymes": [
+        "Vascular endothelial growth factor"
+      ],
+      "etymologie": "Nom formé à partir de termes grecs ou latins décrivant son organe, sa fonction ou son histoire scientifique; voir le nom et les synonymes pour la racine spécifique.",
+      "nature_chimique": "Protéine",
+      "glande_ou_organe_producteur": "Nombreux tissus en situation de croissance ou d’hypoxie",
+      "cellules_productrices": "Cellules diverses, notamment cellules stromales et tumorales.",
+      "anomalies_associees": "Excès de signalisation impliqué dans l’angiogenèse tumorale et certaines maladies rétiniennes; déficit peut limiter la vascularisation et la réparation."
     }
   ]
 }
