@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#075e65">
+    <title>Administration — DICMED</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <a class="brand" href="index.html">✚ Dic<span>Med</span></a>
+    <span>Espace administration</span>
+</header>
+
+<main>
+
+<!-- CONNEXION -->
+<section id="login-panel" class="panel login-panel">
+    <p class="eyebrow">ACCÈS PRIVÉ</p>
+    <h1>Connexion administrateur</h1>
+    <p class="muted">Connecte-toi avec ton compte administrateur.</p>
+
+    <form id="login-form">
+        <label for="email">Adresse e-mail</label>
+        <input id="email" type="email" required>
+
+        <label for="password">Mot de passe</label>
+        <input id="password" type="password" required>
+
+        <button id="login-button" class="primary" type="submit">
+            Se connecter
+        </button>
+
+        <p id="login-message"></p>
+    </form>
+</section>
+
+<!-- TABLEAU DE BORD -->
+<section id="dashboard" hidden>
+
+    <div class="page-heading">
+        <div>
+            <p class="eyebrow">GESTION DES CONTRIBUTIONS</p>
+            <h1>Tableau de bord</h1>
+            <p class="muted">
+                Les propositions acceptées ne sont pas ajoutées automatiquement au dictionnaire.
+            </p>
+        </div>
+
+        <button id="logout-button" class="secondary" type="button">
+            Déconnexion
+        </button>
+    </div>
+
+    <div class="stats">
+
+        <article class="panel">
+            <span>En attente</span>
+            <strong id="count-pending">0</strong>
+        </article>
+
+        <article class="panel">
+            <span>Acceptées</span>
+            <strong id="count-accepted">0</strong>
+        </article>
+
+        <article class="panel">
+            <span>Refusées</span>
+            <strong id="count-rejected">0</strong>
+        </article>
+
+    </div>
+
+    <section class="panel">
+
+        <div class="page-heading">
+            <h2>Propositions reçues</h2>
+            <button id="refresh-button" class="secondary" type="button">
+                Actualiser
+            </button>
+        </div>
+
+        <nav id="filters">
+            <button class="filter active" data-filter="TOUTES">Toutes</button>
+            <button class="filter" data-filter="EN_ATTENTE">En attente</button>
+            <button class="filter" data-filter="ACCEPTEE">Acceptées</button>
+            <button class="filter" data-filter="REFUSEE">Refusées</button>
+        </nav>
+
+        <p id="dashboard-message"></p>
+
+        <div id="suggestions-list"></div>
+
+    </section>
+
+</section>
+```
+
+</main>
+
+<template id="suggestion-template">
+
+```
+<article class="suggestion-card">
+
+    <div class="card-heading">
+        <div>
+            <span class="type-badge"></span>
+            <h2 class="term-title"></h2>
+        </div>
+
+        <span class="status-badge"></span>
+    </div>
+
+    <p class="date muted"></p>
+
+    <div class="details"></div>
+
+    <div class="decision-area"></div>
+
+</article>
+```
+
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase-config.js"></script>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

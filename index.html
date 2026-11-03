@@ -1,145 +1,98 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#075e65">
-    <meta name="description" content="Dictionnaire médical personnel pour les étudiants et professionnels de santé.">
-   <title>DicMed — Dictionnaire médical</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#075e65">
+<meta name="description" content="DicMed : dictionnaire médical en ligne. Cherchez un terme, comprenez-le.">
+<title>DicMed — Le langage médical, simplement</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="./"><span class="logo">✚</span><span>DicMed<small>Le langage médical, simplement</small></span></a>
+  <nav class="menu" aria-label="Sections"><a href="./" id="n-dico" class="on" aria-current="page">Dictionnaire</a><a href="#decoder" id="n-dec">Décoder un mot</a></nav>
+  <div class="tools">
+    <button id="contrib-open" class="btn-light" type="button">Contribuer</button>
+    <button id="size" class="icon" type="button" aria-label="Changer la taille du texte">Aa</button>
+    <button id="theme" class="icon" type="button" aria-label="Changer de thème">☾</button>
+  </div>
+</div></header>
 
+<main class="wrap">
+<div id="vue-dico">
+  <section class="hero">
+    <h1>La médecine, en mots simples.</h1>
+    <p>Retrouvez le sens d’un terme médical, son rôle et ce qu’il désigne. <span id="nb"></span></p>
+    <form id="sf" role="search">
+      <input id="q" type="search" placeholder="Essayez : paludisme, biceps, insuline…" autocomplete="off" aria-label="Rechercher un terme">
+      <button class="btn" type="submit">Rechercher</button>
+    </form>
+  </section>
+  <div id="chips" class="chips" role="group" aria-label="Types de fiches"></div>
+  <div id="abc" class="abc" role="group" aria-label="Index alphabétique"></div>
+  <h2 id="titre" class="list-title"></h2>
+  <div id="list" aria-live="polite"></div>
+  <button id="more" class="btn more" type="button" hidden>Afficher plus de termes</button>
+  <p class="note"><strong>Information importante.</strong> DicMed est un outil éducatif. Il ne pose aucun diagnostic et ne remplace pas l’avis d’un professionnel de santé. En cas de symptôme grave ou soudain, contactez les services d’urgence.</p>
+</div>
 
-<header class="site-header">
-    <div class="header-content">
-        <a href="index.html" class="brand" aria-label="Accueil DicMed">
-            <span class="logo">✚</span>
-            <span class="brand-name">Dic<span>Med</span></span>
-        </a>
-
-        <div class="header-description">
-            <button type="button" id="ouvrir-contribution" class="bouton-contribuer">
-    ✚ Contribuer
-</button>
-            <p>Dictionnaire médical numérique</p>
-            <span>Comprendre la médecine, un terme à la fois.</span>
-        </div>
-    </div>
-</header>
-
-
-
-<main>
-
-   <section class="welcome">
-    <p class="welcome-label">TON COMPAGNON D'ÉTUDES EN SANTÉ</p>
-
-
-<h2>Le savoir médical à portée de main.</h2>
-
-<p>
-    Explore les termes médicaux, comprends les organes et découvre
-    les informations essentielles pour enrichir tes connaissances.
-</p>
-
-
-
-    
-
-
+<section id="vue-decoder" hidden>
+  <div class="hero">
+    <h1>Décoder un mot médical</h1>
+    <p>La plupart des mots médicaux sont construits avec des morceaux grecs ou latins. Apprenez à les reconnaître : un mot long devient une petite phrase.</p>
+    <form id="df" role="search">
+      <input id="dq" type="text" placeholder="Ex. : gastro-entérite" autocomplete="off" aria-label="Mot médical à décoder">
+      <button class="btn" type="submit">Décoder</button>
+    </form>
+    <div id="dex" class="chips" aria-label="Exemples"></div>
+  </div>
+  <div id="dres" aria-live="polite"></div>
+  <h2 class="list-title">Les morceaux de mots les plus fréquents</h2>
+  <div id="dfilt" class="chips"></div>
+  <div id="dliste" class="grid"></div>
 </section>
-
-
-    <nav class="categories" aria-label="Catégories médicales">
-
-
-
-
-
-    <section class="search-section" aria-label="Recherche médicale">
-        <label for="search">Rechercher dans le dictionnaire</label>
-
-        <input
-            type="search"
-            id="search"
-            placeholder="Ex. : abdomen, paludisme, artère..."
-            autocomplete="off"
-        >
-
-        <p class="search-help">Tu peux saisir un terme entier ou seulement une partie du mot.</p>
-    </section>
-
-    <section id="results" aria-live="polite">
-        <p>Ton dictionnaire est prêt.</p>
-    </section>
-
 </main>
+<footer><div class="wrap">DicMed — dictionnaire médical. Vérifiez toujours les informations auprès de sources médicales fiables.</div></footer>
 
-<footer>
-    <p>Dictionnaire médical personnel — Outil d'apprentissage en santé.</p>
-    <p>Les informations présentées doivent être vérifiées auprès de sources médicales fiables.</p>
-</footer>
-<!-- FORMULAIRE DE CONTRIBUTION -->
-<section id="zone-contribution" class="zone-contribution" hidden>
-    <div class="carte-contribution">
-        <button type="button" id="fermer-contribution" class="fermer-contribution">×</button>
+<dialog id="fiche" aria-label="Fiche du terme">
+  <article id="fb"></article>
+  <nav class="fnav">
+    <button id="prev" type="button">‹ Précédent</button>
+    <button id="fav" type="button">♡ Favoris</button>
+    <button id="share" type="button">Partager</button>
+    <button id="next" type="button">Suivant ›</button>
+  </nav>
+</dialog>
 
-        <h2>Contribuer à DICMED</h2>
-        <p>Aide-nous à améliorer le dictionnaire médical.</p>
-
-        <form id="form-contribution">
-
-            <label for="type-contribution">Type de contribution</label>
-            <select id="type-contribution" required>
-                <option value="NOUVEAU_TERME">Proposer un nouveau terme</option>
-                <option value="CORRECTION">Corriger une fiche existante</option>
-                <option value="COMPLEMENT">Ajouter un complément</option>
-            </select>
-
-            <div id="champ-terme-propose">
-                <label for="terme-propose">Terme médical proposé</label>
-                <input type="text" id="terme-propose" placeholder="Ex. : Tachycardie">
-            </div>
-
-            <div id="champ-terme-cible" hidden>
-                <label for="terme-cible">Terme concerné</label>
-                <input type="text" id="terme-cible" placeholder="Nom du terme dans DICMED">
-            </div>
-
-            <div id="champ-cible" hidden>
-                <label for="champ-cible">Rubrique concernée</label>
-                <select id="champ-cible">
-                    <option value="Définition">Définition</option>
-                    <option value="Étymologie">Étymologie</option>
-                    <option value="Fonction">Fonction</option>
-                    <option value="Pathologies">Pathologies</option>
-                    <option value="Autre">Autre</option>
-                </select>
-            </div>
-
-            <label for="contenu-propose">Contenu de la proposition</label>
-            <textarea id="contenu-propose" rows="5" required
-                placeholder="Écris ta proposition ici..."></textarea>
-
-            <label for="justification">Justification ou source (facultatif)</label>
-            <textarea id="justification" rows="3"
-                placeholder="Explique ta correction ou indique une source."></textarea>
-
-            <button type="submit" id="envoyer-contribution">
-                Envoyer ma contribution
-            </button>
-
-            <p id="message-contribution" role="status"></p>
-        </form>
+<dialog id="contrib" aria-label="Contribuer à DicMed">
+  <form id="cform" class="cform">
+    <h2>Contribuer à DicMed</h2>
+    <p>Proposez un nouveau terme ou une correction. Chaque proposition est relue avant publication.</p>
+    <label for="c-type">Type de contribution</label>
+    <select id="c-type">
+      <option value="nouveau_terme">Proposer un nouveau terme</option>
+      <option value="correction">Corriger une fiche existante</option>
+      <option value="complement">Ajouter un complément</option>
+    </select>
+    <div id="c-new"><label for="c-terme">Terme proposé</label><input id="c-terme" type="text" placeholder="Ex. : Tachycardie"></div>
+    <div id="c-old" hidden>
+      <label for="c-cible">Terme concerné</label><input id="c-cible" type="text" placeholder="Nom du terme dans DicMed">
+      <label for="c-rubrique">Rubrique concernée</label>
+      <select id="c-rubrique"><option>Définition</option><option>Étymologie</option><option>Fonction</option><option>Pathologies</option><option>Autre</option></select>
     </div>
-</section>
+    <label for="c-contenu">Contenu de la proposition</label>
+    <textarea id="c-contenu" rows="5" required></textarea>
+    <label for="c-just">Justification ou source (facultatif)</label>
+    <textarea id="c-just" rows="3"></textarea>
+    <div class="cbtns"><button id="c-close" type="button" class="ghost">Fermer</button><button id="c-send" type="submit" class="btn">Envoyer ma contribution</button></div>
+    <p id="c-msg" role="status"></p>
+  </form>
+</dialog>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase-config.js"></script>
-<script src="script.js"></script>
-
-
+<script src="app.js"></script>
+<script src="decoder.js"></script>
 </body>
 </html>
