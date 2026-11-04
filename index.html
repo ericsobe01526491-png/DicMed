@@ -6,12 +6,12 @@
 <meta name="theme-color" content="#075e65">
 <meta name="description" content="DicMed : dictionnaire médical en ligne. Cherchez un terme, comprenez-le.">
 <title>DicMed — Le langage médical, simplement</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20261104c">
 </head>
 <body>
 <header class="top"><div class="wrap bar">
   <a class="brand" href="./"><span class="logo">✚</span><span>DicMed<small>Le langage médical, simplement</small></span></a>
-  <nav class="menu" aria-label="Sections"><a href="./" id="n-dico" class="on" aria-current="page">Dictionnaire</a><a href="#decoder" id="n-dec">Décoder un mot</a></nav>
+  <nav class="menu" aria-label="Sections"><a href="./" id="n-dico" class="on" aria-current="page">Dictionnaire</a><a href="#decoder" id="n-dec">Décoder un mot</a><a href="#bio" id="n-bio">Bio</a><a href="#reflexe" id="n-reflexe">Réflexe naturel</a></nav>
   <div class="tools">
     <button id="contrib-open" class="btn-light" type="button">Contribuer</button>
     <button id="size" class="icon" type="button" aria-label="Changer la taille du texte">Aa</button>
@@ -52,8 +52,26 @@
   <div id="dfilt" class="chips"></div>
   <div id="dliste" class="grid"></div>
 </section>
+
+<section id="vue-bio" hidden>
+  <div class="hero">
+    <h1>Traitements bio</h1>
+    <p>Les traitements dits « bio » ou naturels, présentés simplement.</p>
+  </div>
+  <div id="bio-liste"></div>
+  <p class="note"><strong>Information importante.</strong> « Bio » ou « naturel » ne veut pas dire sans risque. Demandez l’avis d’un professionnel de santé avant d’utiliser un traitement, surtout en cas de maladie, de grossesse ou de médicaments en cours.</p>
+</section>
+
+<section id="vue-reflexe" hidden>
+  <div class="hero">
+    <h1>Réflexe naturel</h1>
+    <p>Les actions de notre corps que nous faisons le plus souvent sans nous en rendre compte, ou que nous n’arrivons pas à contrôler : comprendre comment et pourquoi elles se produisent.</p>
+  </div>
+  <div id="reflexe-liste"></div>
+  <p class="note"><strong>Information importante.</strong> Ces fiches sont éducatives. Elles ne permettent pas d’établir un diagnostic et ne remplacent pas l’avis d’un professionnel de santé.</p>
+</section>
 </main>
-<footer><div class="wrap">DicMed — dictionnaire médical. Vérifiez toujours les informations auprès de sources médicales fiables.</div></footer>
+<footer><div class="wrap">DicMed — dictionnaire médical. Vérifiez toujours les informations auprès de sources médicales fiables.<br><small id="ver"></small></div></footer>
 
 <dialog id="fiche" aria-label="Fiche du terme">
   <article id="fb"></article>
@@ -92,7 +110,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase-config.js"></script>
-<script src="app.js"></script>
-<script src="decoder.js"></script>
+<script src="app.js?v=20261104c"></script>
+<script src="decoder.js?v=20261104c"></script>
+<script src="bio.js?v=20261104c"></script>
 </body>
 </html>

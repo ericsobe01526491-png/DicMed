@@ -262,14 +262,27 @@ function listerRacines() {
 }
 listerRacines();
 
-// ---------------------------------------------------------------- navigation Dictionnaire / Décoder
+// ---------------------------------------------------------------- navigation Dictionnaire / Décoder / Bio
+const VUES = {dico: ["#vue-dico", "#n-dico"], decoder: ["#vue-decoder", "#n-dec"], bio: ["#vue-bio", "#n-bio"], reflexe: ["#vue-reflexe", "#n-reflexe"]};
+let vueCourante = "dico";
 function vue(nom) {
-  const d = nom === "decoder";
-  $("#vue-dico").hidden = d; $("#vue-decoder").hidden = !d;
-  $("#n-dico").classList.toggle("on", !d); $("#n-dec").classList.toggle("on", d);
-  $("#n-dico").setAttribute("aria-current", d ? "false" : "page"); $("#n-dec").setAttribute("aria-current", d ? "page" : "false");
+  vueCourante = nom;
+  for (const [k, [v, n]] of Object.entries(VUES)) {
+    const sv = $(v), sn = $(n);
+    if (sv) sv.hidden = k !== nom;
+    if (sn) { sn.classList.toggle("on", k === nom); sn.setAttribute("aria-current", k === nom ? "page" : "false"); }
+  }
+  document.body.classList.toggle("reflexe", nom === "reflexe");      // fond orange dans la rubrique Réflexe naturel
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = nom === "reflexe" ? "#8a3b00" : "#075e65";
 }
-$("#n-dico").onclick = e => { e.preventDefault(); vue("dico"); history.replaceState(null, "", location.pathname + location.search); window.scrollTo(0, 0); };
-$("#n-dec").onclick = e => { e.preventDefault(); vue("decoder"); history.replaceState(null, "", "#decoder"); window.scrollTo(0, 0); };
-$("#fiche").addEventListener("close", () => { if (!$("#vue-decoder").hidden) history.replaceState(null, "", "#decoder"); });
-if (location.hash === "#decoder") vue("decoder");
+for (const [k, [, n]] of Object.entries(VUES)) {
+  const el = $(n);
+  if (el) el.onclick = e => {
+    e.preventDefault(); vue(k);
+    history.replaceState(null, "", k === "dico" ? location.pathname + location.search : "#" + k);
+    window.scrollTo(0, 0);
+  };
+}
+$("#fiche").addEventListener("close", () => { if (vueCourante !== "dico") history.replaceState(null, "", "#" + vueCourante); });
+if (VUES[location.hash.slice(1)]) vue(location.hash.slice(1));

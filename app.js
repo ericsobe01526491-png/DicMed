@@ -1,15 +1,16 @@
 "use strict";
-const SING = {maladie:"Maladie", muscle:"Muscle", hormone:"Hormone", tissu:"Tissu", anatomie:"Anatomie"};
-const PLUR = {maladie:"Maladies", muscle:"Muscles", hormone:"Hormones", tissu:"Tissus", anatomie:"Anatomie"};
-const LABELS = {etymologie:"Étymologie", nature:"Nature", definition_situation_anatomique:"Situation", fonction:"Fonction",
+const SING = {maladie:"Maladie", muscle:"Muscle", hormone:"Hormone", tissu:"Tissu", anatomie:"Anatomie", reflexe:"Réflexe naturel"};
+const PLUR = {maladie:"Maladies", muscle:"Muscles", hormone:"Hormones", tissu:"Tissus", anatomie:"Anatomie", reflexe:"Réflexes naturels"};
+const LABELS = {nom_medical:"Nom médical", etymologie:"Étymologie", nature:"Nature", definition_situation_anatomique:"Situation", fonction:"Fonction",
   localisation:"Localisation", origine:"Origine", insertion:"Insertion", trajet_rapports_anatomiques:"Trajet et rapports",
   innervation:"Innervation", vascularisation:"Vascularisation", terminaison:"Terminaison", synergie_antagonisme:"Synergie et antagonisme",
   variations_anatomiques:"Variations anatomiques", abreviation:"Abréviation", nature_chimique:"Nature chimique",
-  glande_ou_organe_producteur:"Producteur", cellules_productrices:"Cellules productrices", anomalies_associees:"Anomalies associées",
-  physiopathologie:"Physiopathologie", etude_clinique:"Étude clinique", causes_agent_pathogene:"Causes", epidemiologie:"Épidémiologie",
-  complications:"Complications", traitement:"Traitement", pathologies:"Pathologies associées"};
-const SKIP = new Set(["id","terme","latin","type","systeme","categorie","resume","synonymes","definition","nature","src"]);
+  glande_ou_organe_producteur:"Producteur", cellules_productrices:"Cellules productrices", mecanisme_physiologique:"Mécanisme physiologique", facteurs_declenchants:"Facteurs déclenchants", regulation:"Régulation", role_organisme:"Rôle dans l’organisme", anomalies_associees:"Anomalies associées",
+  etiologie:"Étiologie", physiopathologie:"Physiopathologie", facteurs_risque:"Facteurs de risque", classification:"Classification", signes_fonctionnels:"Signes fonctionnels", signes_physiques:"Signes physiques", examens_complementaires:"Examens complémentaires", diagnostic_differentiel:"Diagnostic différentiel", etude_clinique:"Étude clinique", causes_agent_pathogene:"Causes", epidemiologie:"Épidémiologie",
+  complications:"Complications", traitement_medical:"Traitement médical", traitement_chirurgical:"Traitement chirurgical", pronostic:"Pronostic", prevention:"Prévention", traitement:"Traitement", pathologies:"Pathologies associées", sources:"Sources indiquées (à vérifier)"};
+const SKIP = new Set(["id","terme","latin","type","systeme","categorie","resume","synonymes","definition","nature","src","groupe","ordre","relu","l","n","repertoire"]);
 const PAGE = 60;
+const VERSION = "20261104c";
 const $ = s => document.querySelector(s);
 const norm = s => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/œ/gi, "oe").replace(/[’']/g, " ").toLowerCase().trim();
 const store = {
@@ -173,7 +174,7 @@ function openFiche(id) {
   if (!f) return;
   const box = $("#fb"), deja = new Set();
   courant = id;
-  box.replaceChildren(
+  box.replaceChildren(...[
     h("div", {class: "fhead"},
       pile.length > 0 && h("button", {class: "back", type: "button", onclick: () => openFiche(pile.pop())}, "‹ Retour"),
       h("span", {class: "badge t-" + f.type}, SING[f.type]), h("span", {class: "sys"}, f.systeme),
@@ -182,16 +183,22 @@ function openFiche(id) {
     f.latin && h("p", {class: "latin"}, f.latin),
     f.synonymes && h("p", {class: "syn"}, "Aussi : " + [].concat(f.synonymes).join(", ")),
     f.nature && h("p", {class: "pill"}, "Nature : " + f.nature),
-    f.definition && h("p", {class: "lead"}, lier(f.definition, f, deja)));
+    f.definition && h("p", {class: "lead"}, lier(f.definition, f, deja))].filter(Boolean));
   const cles = [...Object.keys(LABELS).filter(k => k in f), ...Object.keys(f).filter(k => !SKIP.has(k) && !(k in LABELS))];
+  // Rubriques déroulantes : la première est ouverte, un bouton ouvre ou referme tout
+  const rubs = [];
   cles.forEach(k => {
     const v = f[k];
     if (!(typeof v === "string" || (Array.isArray(v) && v.every(x => typeof x === "string")))) return;
-    box.append(h("section", {}, h("h4", {}, LABELS[k] || k.replace(/_/g, " ").replace(/^./, c => c.toUpperCase())),
+    rubs.push(h("details", {class: "rub", open: rubs.length === 0},
+      h("summary", {}, LABELS[k] || k.replace(/_/g, " ").replace(/^./, c => c.toUpperCase())),
       Array.isArray(v) ? h("ul", {}, v.map(x => h("li", {}, lier(x, f, deja)))) : h("p", {}, lier(v, f, deja))));
   });
-  const voisins = fiches.filter(x => x !== f && x.categorie === f.categorie).slice(0, 6);
-  if (voisins.length) box.append(h("section", {}, h("h4", {}, "Dans la même catégorie : " + f.categorie),
+  if (rubs.length > 1) box.append(h("div", {class: "tout"}, h("button", {type: "button", class: "ghost",
+    onclick: e => { const ouvrir = rubs.some(d => !d.open); rubs.forEach(d => { d.open = ouvrir; }); e.target.textContent = ouvrir ? "Tout replier" : "Tout déplier"; }}, "Tout déplier")));
+  box.append(...rubs);
+  const voisins = fiches.filter(x => x !== f && (f.groupe ? x.groupe === f.groupe : x.categorie === f.categorie)).slice(0, 6);
+  if (voisins.length) box.append(h("section", {}, h("h4", {}, "Dans la même catégorie : " + (f.groupe || f.categorie)),
     h("div", {class: "rel"}, voisins.map(x => h("button", {type: "button", onclick: () => aller(x.id)}, x.terme)))));
   box.scrollTop = 0;
 
@@ -268,7 +275,7 @@ async function charger() {
   const erreurs = [];
   for (const c of CHEMINS) {
     try {
-      const r = await fetch(c, {cache: "no-cache"});
+      const r = await fetch(c + "?v=" + VERSION, {cache: "no-cache"});
       if (!r.ok) { erreurs.push(c + " : erreur " + r.status); continue; }
       return await r.json();
     } catch (e) { erreurs.push(c + " : " + e.message); }
@@ -291,7 +298,9 @@ charger()
     fiches.forEach((f, i) => { adapter(f, i); prepare(f); byId.set(f.id, f); });
     indexerLiens();
     $("#nb").textContent = fiches.length + " fiches.";
+    if ($("#ver")) $("#ver").textContent = "Version " + VERSION + " · " + fiches.length + " fiches";
     render();
+    if (typeof afficherReflexes === "function") afficherReflexes();
     const id = location.hash.slice(1);
     if (byId.has(id)) openFiche(id);
   })
