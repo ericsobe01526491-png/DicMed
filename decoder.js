@@ -255,7 +255,7 @@ const NOMS = {p: "Préfixes", r: "Radicaux", s: "Suffixes"};
 function listerRacines() {
   $("#dfilt").replaceChildren(...[["tous", "Tous"], ...Object.entries(NOMS)].map(([k, l]) =>
     h("button", {class: "chip" + (filtre === k ? " on" : ""), type: "button", onclick: () => { filtre = k; listerRacines(); }},
-      l + " ", h("small", {}, String(k === "tous" ? RACINES.length : RACINES.filter(r => r.k === k).length)))));
+      l + " ", h("small", {class: "stat"}, String(k === "tous" ? RACINES.length : RACINES.filter(r => r.k === k).length)))));
   $("#dliste").replaceChildren(...RACINES.filter(r => filtre === "tous" || r.k === filtre).map(r =>
     h("div", {class: "card"}, h("strong", {}, r.label), h("span", {class: "snip"}, r.sens),
       h("button", {class: "ex", type: "button", onclick: () => { decoderMot(r.ex); window.scrollTo(0, 0); }}, "ex. " + r.ex))));

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Espace administrateur — DicMed</title>
+<link rel="stylesheet" href="espace-admin.css">
+</head>
+<body>
+<section id="connexion" class="login">
+  <form id="lf">
+    <p class="logo">✚ DicMed <small>Administration</small></p>
+    <h1>Connexion</h1>
+    <label for="em">Adresse e-mail</label><input id="em" type="email" autocomplete="username" required>
+    <label for="pw">Mot de passe</label><input id="pw" type="password" autocomplete="current-password" required>
+    <button id="lb" class="btn" type="submit">Se connecter</button>
+    <p id="lm" role="status"></p>
+    <a class="retour" href="../index.html">← Retour au site</a>
+  </form>
+</section>
+
+<div id="app" class="app" hidden>
+  <aside class="side">
+    <p class="logo">✚ DicMed <small>Administration</small></p>
+    <nav id="menu" aria-label="Sections">
+      <button type="button" data-v="stats">Statistiques</button>
+      <button type="button" data-v="dico">Dictionnaire</button>
+      <button type="button" data-v="contrib">Contributions</button>
+    </nav>
+    <div class="bas"><a href="../index.html">← Voir le site</a><button id="out" type="button" class="ghost">Déconnexion</button></div>
+  </aside>
+  <main>
+    <section id="v-stats" hidden>
+      <header class="titre"><h1>Mots les plus lus</h1>
+        <select id="periode" aria-label="Période"><option value="7">7 derniers jours</option><option value="30" selected>30 derniers jours</option><option value="90">90 derniers jours</option><option value="365">12 derniers mois</option></select></header>
+      <div class="kpis"><div class="kpi"><span>Lectures de fiches</span><b id="k-vues">—</b></div></div>
+      <div class="panneau"><div id="top"></div></div>
+    </section>
+    <section id="v-dico" hidden>
+      <header class="titre"><h1>Le dictionnaire en chiffres</h1></header>
+      <div class="kpis" id="k-dico"></div>
+      <div class="deux"><div class="panneau"><h2>Par type</h2><div id="par-type"></div></div><div class="panneau"><h2>Par système</h2><div id="par-sys"></div></div></div>
+    </section>
+    <section id="v-contrib" hidden>
+      <header class="titre"><h1>Contributions</h1><button id="rafr" class="ghost" type="button">Actualiser</button></header>
+      <div id="filtres" class="filtres"></div>
+      <p id="cm" role="status"></p>
+      <div id="liste"></div>
+    </section>
+  </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../supabase-config.js"></script>
+<script src="espace-admin.js"></script>
+</body>
+</html>

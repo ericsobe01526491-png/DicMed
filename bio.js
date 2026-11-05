@@ -37,9 +37,9 @@ function afficherReflexes() {
   zone.replaceChildren(...[...parties].map(([partie, groupes]) => {
     const n = [...groupes.values()].reduce((s, l) => s + l.length, 0);
     return h("details", {class: "partie"},
-      h("summary", {}, h("strong", {}, partie), h("small", {}, n + (n > 1 ? " fiches" : " fiche"))),
+      h("summary", {}, h("strong", {}, partie), h("small", {class: "stat"}, n + (n > 1 ? " fiches" : " fiche"))),
       [...groupes].map(([g, l]) => g
-        ? h("details", {class: "groupe"}, h("summary", {}, g, h("small", {}, String(l.length))), h("div", {class: "grid"}, l.map(card)))
+        ? h("details", {class: "groupe"}, h("summary", {}, g, h("small", {class: "stat"}, String(l.length))), h("div", {class: "grid"}, l.map(card)))
         : h("div", {class: "grid"}, l.map(card))));
   }));
 }

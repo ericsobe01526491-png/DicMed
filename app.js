@@ -10,7 +10,17 @@ const LABELS = {nom_medical:"Nom médical", etymologie:"Étymologie", nature:"Na
   complications:"Complications", traitement_medical:"Traitement médical", traitement_chirurgical:"Traitement chirurgical", pronostic:"Pronostic", prevention:"Prévention", traitement:"Traitement", pathologies:"Pathologies associées", sources:"Sources indiquées (à vérifier)"};
 const SKIP = new Set(["id","terme","latin","type","systeme","categorie","resume","synonymes","definition","nature","src","groupe","ordre","relu","l","n","repertoire"]);
 const PAGE = 60;
-const VERSION = "20261104c";
+// Mode administrateur : si une session Supabase est ouverte dans ce navigateur, les chiffres (nombre de fiches, compteurs) s'affichent.
+if (window.dicmedSupabase && dicmedSupabase.auth) {
+  dicmedSupabase.auth.getSession().then(({data}) => { if (data && data.session) document.body.classList.add("est-admin"); }).catch(() => {});
+}
+// Statistiques : une lecture anonyme (id et nom de la fiche, sans donnée personnelle), une fois par fiche et par session
+function compterVue(f) {
+  if (!window.dicmedSupabase || document.body.classList.contains("est-admin")) return;
+  try { if (sessionStorage.getItem("dicmed_vu_" + f.id)) return; sessionStorage.setItem("dicmed_vu_" + f.id, "1"); } catch {}
+  try { dicmedSupabase.from("vues_fiches").insert({fiche_id: f.id, terme: f.terme}).then(() => {}, () => {}); } catch {}
+}
+const VERSION = "20261104e";
 const $ = s => document.querySelector(s);
 const norm = s => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/œ/gi, "oe").replace(/[’']/g, " ").toLowerCase().trim();
 const store = {
@@ -98,14 +108,14 @@ function render() {
   fiches.forEach(f => counts[f.type] = (counts[f.type] || 0) + 1);
   $("#chips").replaceChildren(...[["tous", "Tous"], ...Object.entries(PLUR), ["favoris", "♡ Favoris"]].map(([k, l]) =>
     h("button", {class: "chip" + (type === k ? " on" : ""), type: "button", "aria-pressed": String(type === k),
-      onclick: () => { type = k; letter = ""; shown = PAGE; render(); }}, l + " ", h("small", {}, String(counts[k] || 0)))));
+      onclick: () => { type = k; letter = ""; shown = PAGE; render(); }}, l + " ", h("small", {class: "stat"}, String(counts[k] || 0)))));
   $("#abc").replaceChildren(..."ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map(L =>
     h("button", {type: "button", class: letter === L ? "on" : null, disabled: !present.has(L),
       "aria-label": "Termes en " + L, onclick: () => { letter = letter === L ? "" : L; shown = PAGE; render(); }}, L)));
 
   const q = query.trim();
   const nom = q ? "Résultats pour « " + q + " »" : type === "tous" ? "Tous les termes" : type === "favoris" ? "Favoris" : PLUR[type];
-  $("#titre").replaceChildren(nom, h("span", {}, view.length + (view.length > 1 ? " fiches" : " fiche")));
+  $("#titre").replaceChildren(nom, h("span", {class: "stat"}, view.length + (view.length > 1 ? " fiches" : " fiche")));
 
   const list = $("#list");
   list.replaceChildren();
@@ -220,6 +230,7 @@ function openFiche(id) {
   };
   history.replaceState(null, "", "#" + id);
   if (!dlg.open) dlg.showModal();
+  compterVue(f);
 }
 dlg.addEventListener("close", () => { pile = []; courant = ""; history.replaceState(null, "", location.pathname + location.search); });
 dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
