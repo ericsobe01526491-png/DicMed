@@ -20,7 +20,7 @@ function compterVue(f) {
   try { if (sessionStorage.getItem("dicmed_vu_" + f.id)) return; sessionStorage.setItem("dicmed_vu_" + f.id, "1"); } catch {}
   try { dicmedSupabase.from("vues_fiches").insert({fiche_id: f.id, terme: f.terme}).then(() => {}, () => {}); } catch {}
 }
-const VERSION = "20261104e";
+const VERSION = "20261104h";
 const $ = s => document.querySelector(s);
 const norm = s => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/œ/gi, "oe").replace(/[’']/g, " ").toLowerCase().trim();
 const store = {
@@ -36,7 +36,7 @@ function h(tag, attrs = {}, ...kids) {
     else if (k.startsWith("on")) e.addEventListener(k.slice(2), v);
     else e.setAttribute(k, v === true ? "" : v);
   }
-  e.append(...kids.flat().filter(x => x != null && x !== false));
+  e.append(...kids.flat(Infinity).filter(x => x != null && x !== false));
   return e;
 }
 // Distance de Levenshtein bornée : sert à tolérer les fautes de frappe

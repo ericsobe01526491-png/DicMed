@@ -92,7 +92,7 @@ dialog::backdrop{background:rgba(6,30,38,.62)}
 .dnote{margin:8px 0;color:var(--muted);font-size:.85rem}
 .ex{align-self:flex-start;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-size:.85rem}
 #dres .btn{margin-top:8px}
-@media(max-width:560px){.bar{flex-wrap:wrap}.menu{order:3;width:100%}.drow{grid-template-columns:1fr 1fr}.drow small{grid-column:1/-1}.brand small{display:none}.btn-light{padding:9px 10px}#fb{padding:18px 16px 6px}.fnav{padding:10px}}
+@media(max-width:560px){.bar{flex-wrap:wrap}.drow{grid-template-columns:1fr 1fr}.drow small{grid-column:1/-1}.brand small{display:none}.btn-light{padding:9px 10px}#fb{padding:18px 16px 6px}.fnav{padding:10px}}
 .vide{margin:18px 0;padding:22px;border:1px dashed var(--line);border-radius:16px;background:var(--card);color:var(--muted);text-align:center}
 .bio-fiche{margin:10px 0;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
 .bio-fiche summary{display:flex;flex-direction:column;gap:4px;cursor:pointer}
@@ -131,3 +131,14 @@ body.reflexe .menu a.on{color:#8a3b00}
 body.est-admin .stat{display:revert!important}
 .adm{display:none;text-decoration:none}
 body.est-admin .adm{display:inline-block}
+.icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.etapes{margin:12px 0;padding-left:1.2rem}.etapes li{margin:8px 0}
+.maj{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:12px;background:#06323f;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.maj button{padding:6px 12px;border:0;border-radius:8px;background:#18c8c4;color:#06323f;font-weight:700}
+body{padding-left:64px}
+.menu.rail{position:fixed;top:0;left:0;bottom:0;width:64px;z-index:15;flex-direction:column;flex-wrap:nowrap;align-items:center;gap:10px;padding:14px 0;background:linear-gradient(180deg,#06323f,#075e65);box-shadow:2px 0 12px rgba(0,0,0,.18)}
+body.reflexe .menu.rail{background:linear-gradient(180deg,#8a3b00,#d9690f)}
+.rail a{position:relative}
+.rail a:focus-visible::after{content:attr(aria-label);position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);padding:6px 10px;border-radius:8px;background:#06323f;color:#fff;font-size:.85rem;font-weight:600;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.3);pointer-events:none}
+@media(hover:hover){.rail a:hover::after{content:attr(aria-label);position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);padding:6px 10px;border-radius:8px;background:#06323f;color:#fff;font-size:.85rem;font-weight:600;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.3);pointer-events:none}}
+@media(max-width:560px){body{padding-left:56px}.menu.rail{width:56px;gap:8px}.rail a{width:42px;height:42px}}

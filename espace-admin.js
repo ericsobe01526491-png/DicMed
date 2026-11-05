@@ -8,7 +8,7 @@ function h(tag, attrs = {}, ...kids) {
     if (v === null || v === false) continue;
     if (k === "class") e.className = v; else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v === true ? "" : v);
   }
-  e.append(...kids.flat().filter(x => x != null && x !== false));
+  e.append(...kids.flat(Infinity).filter(x => x != null && x !== false));
   return e;
 }
 const msg = (el, t) => { el.textContent = t; };
