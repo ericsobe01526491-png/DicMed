@@ -14,7 +14,7 @@ function compterVue(f) {
   try { if (sessionStorage.getItem("dicmed_vu_" + f.id)) return; sessionStorage.setItem("dicmed_vu_" + f.id, "1"); } catch {}
   try { dicmedSupabase.from("vues_fiches").insert({fiche_id: f.id, terme: f.terme}).then(() => {}, () => {}); } catch {}
 }
-const VERSION = "20261105b";
+const VERSION = "20261105c";
 const $ = s => document.querySelector(s);
 const norm = s => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/œ/gi, "oe").replace(/[’']/g, " ").toLowerCase().trim();
 const store = {
