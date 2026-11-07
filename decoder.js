@@ -279,10 +279,24 @@ function vue(nom) {
 for (const [k, [, n]] of Object.entries(VUES)) {
   const el = $(n);
   if (el) el.onclick = e => {
-    e.preventDefault(); vue(k);
+    e.preventDefault(); vue(k); dialOuvrir(false);
     history.replaceState(null, "", k === "dico" ? location.pathname + location.search : "#" + k);
     window.scrollTo(0, 0);
   };
 }
 $("#fiche").addEventListener("close", () => { if (vueCourante !== "dico") history.replaceState(null, "", "#" + vueCourante); });
 if (VUES[location.hash.slice(1)]) vue(location.hash.slice(1));
+
+// Menu rond « + » en bas à gauche : s'ouvre au toucher, se referme après un choix, un clic ailleurs ou la touche Échap
+const dial = $("#dial"), dialBtn = $("#dial-btn");
+function dialOuvrir(ouvrir) {
+  if (!dial) return;
+  dial.classList.toggle("ouvert", ouvrir);
+  dialBtn.setAttribute("aria-expanded", String(ouvrir));
+  dialBtn.setAttribute("aria-label", ouvrir ? "Fermer le menu des rubriques" : "Ouvrir le menu des rubriques");
+}
+if (dialBtn) {
+  dialBtn.onclick = () => dialOuvrir(!dial.classList.contains("ouvert"));
+  document.addEventListener("click", e => { if (!dial.contains(e.target)) dialOuvrir(false); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") dialOuvrir(false); });
+}

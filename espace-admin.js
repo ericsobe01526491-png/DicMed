@@ -60,7 +60,7 @@ async function statistiques() {
 
 // ---------------------------------------------------------------- le dictionnaire en chiffres (réservé à l'administrateur)
 let TERMES = null;
-const TYPES = {maladie: "Maladies", muscle: "Muscles", hormone: "Hormones", tissu: "Tissus", anatomie: "Anatomie", reflexe: "Réflexes naturels"};
+const TYPES = {maladie: "Maladies", muscle: "Muscles", hormone: "Hormones", tissu: "Tissus", anatomie: "Anatomie", reflexe: "Réflexes naturels", jargon: "Jargon médical", biologie: "Biologie"};
 function barres(zone, compte) {
   const max = Math.max(1, ...compte.map(x => x[1]));
   zone.replaceChildren(...compte.map(([nom, n], i) => h("div", {class: "ligne"}, h("span", {class: "rang"}, String(i + 1)), h("span", {class: "nom"}, nom),

@@ -1,8 +1,8 @@
 :root{--bg:#f3f8fa;--card:#fff;--ink:#16313b;--muted:#5d7580;--line:#dce8ec;--brand:#087f8c;--brand-d:#066570;--hi:#18c8c4;--hi-ink:#06323f;--note:#fff5d9;--note-ink:#6b4c06;
---c-maladie:#b4372a;--c-reflexe:#0b7a75;--c-muscle:#27507f;--c-hormone:#5b3a8e;--c-tissu:#8a5a00;--c-anatomie:#1c6b43;
+--c-maladie:#b4372a;--c-reflexe:#0b7a75;--c-jargon:#a3336f;--c-biologie:#3f4fb0;--c-muscle:#27507f;--c-hormone:#5b3a8e;--c-tissu:#8a5a00;--c-anatomie:#1c6b43;
 --serif:Georgia,"Times New Roman",serif;--sans:system-ui,"Segoe UI",Roboto,sans-serif}
 [data-theme=dark]{--bg:#0d1f29;--card:#132b37;--ink:#e6f1f4;--muted:#9bb3bc;--line:#23414f;--brand:#4fd3d9;--brand-d:#8fe6ea;--note:#3a3112;--note-ink:#f1d98a;
---c-maladie:#ff9b8f;--c-reflexe:#6fe0d4;--c-muscle:#8fb8f0;--c-hormone:#c4a6ef;--c-tissu:#f0c46a;--c-anatomie:#7fd8a6}
+--c-maladie:#ff9b8f;--c-reflexe:#6fe0d4;--c-jargon:#f2a7cf;--c-biologie:#a9b4ff;--c-muscle:#8fb8f0;--c-hormone:#c4a6ef;--c-tissu:#f0c46a;--c-anatomie:#7fd8a6}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 var(--sans)}
 button,select,input,textarea{font:inherit}button{cursor:pointer}
@@ -77,7 +77,6 @@ dialog::backdrop{background:rgba(6,30,38,.62)}
 .cform input,.cform select,.cform textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
 .cbtns{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
 #c-msg{min-height:1.5em;font-weight:600}
-.menu{display:flex;flex-wrap:wrap;gap:4px}
 .dcard{max-width:760px;margin:6px 0 10px;padding:20px 22px;border:1px solid var(--line);border-radius:20px;background:var(--card);box-shadow:0 8px 24px rgba(8,60,70,.08)}
 .dmot{margin:0 0 12px;font:700 clamp(1.7rem,6vw,2.6rem)/1.2 var(--serif);color:var(--brand-d);overflow-wrap:anywhere}
 .dot{margin:0 .12em;color:var(--muted);font-weight:400}
@@ -120,13 +119,6 @@ body{transition:background-color .25s}
 body.reflexe{--bg:#ffc78f;--line:#eaa96a;--muted:#6b4115;--brand-d:#8a3b00;--note:#fff0d9;--note-ink:#6b3a00}
 body.reflexe .top{background:linear-gradient(135deg,#8a3b00,#d9690f)}
 [data-theme=dark] body.reflexe{--bg:#3b220a;--card:#52300f;--ink:#fff3e4;--muted:#e6c19b;--line:#7c4e22;--brand-d:#ffb36b;--note:#5a3a12;--note-ink:#ffd9a8}
-.menu{gap:8px}
-.menu a{display:grid;place-items:center;width:44px;height:44px;border:1.5px solid rgba(255,255,255,.4);border-radius:12px;background:rgba(255,255,255,.1);color:#fff;text-decoration:none;transition:transform .15s,background .15s,box-shadow .15s}
-.menu a:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
-.menu a.on{border-color:#fff;background:#fff;color:#066570;box-shadow:0 4px 12px rgba(0,0,0,.25)}
-body.reflexe .menu a.on{color:#8a3b00}
-.menu svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-@media(prefers-reduced-motion:reduce){.menu a{transition:none}.menu a:hover{transform:none}}
 .stat{display:none!important}
 body.est-admin .stat{display:revert!important}
 .adm{display:none;text-decoration:none}
@@ -135,10 +127,21 @@ body.est-admin .adm{display:inline-block}
 .etapes{margin:12px 0;padding-left:1.2rem}.etapes li{margin:8px 0}
 .maj{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:12px;background:#06323f;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.3)}
 .maj button{padding:6px 12px;border:0;border-radius:8px;background:#18c8c4;color:#06323f;font-weight:700}
-body{padding-left:64px}
-.menu.rail{position:fixed;top:0;left:0;bottom:0;width:64px;z-index:15;flex-direction:column;flex-wrap:nowrap;align-items:center;gap:10px;padding:14px 0;background:linear-gradient(180deg,#06323f,#075e65);box-shadow:2px 0 12px rgba(0,0,0,.18)}
-body.reflexe .menu.rail{background:linear-gradient(180deg,#8a3b00,#d9690f)}
-.rail a{position:relative}
-.rail a:focus-visible::after{content:attr(aria-label);position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);padding:6px 10px;border-radius:8px;background:#06323f;color:#fff;font-size:.85rem;font-weight:600;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.3);pointer-events:none}
-@media(hover:hover){.rail a:hover::after{content:attr(aria-label);position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%);padding:6px 10px;border-radius:8px;background:#06323f;color:#fff;font-size:.85rem;font-weight:600;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.3);pointer-events:none}}
-@media(max-width:560px){body{padding-left:56px}.menu.rail{width:56px;gap:8px}.rail a{width:42px;height:42px}}
+.t-jargon{--b:var(--c-jargon)}
+.t-biologie{--b:var(--c-biologie)}
+body{padding-bottom:88px}
+.dial{position:fixed;left:16px;bottom:16px;z-index:30;display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding-bottom:env(safe-area-inset-bottom,0px)}
+.dial-btn{width:56px;height:56px;display:grid;place-items:center;border:0;border-radius:50%;background:linear-gradient(135deg,#06323f,#087f8c);color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.35)}
+body.reflexe .dial-btn{background:linear-gradient(135deg,#8a3b00,#d9690f)}
+.dial-btn .plus{display:block;font-size:2rem;font-weight:300;line-height:1;transition:transform .2s}
+.dial.ouvert .dial-btn .plus{transform:rotate(45deg)}
+.dial-liste{display:none;flex-direction:column;gap:10px}
+.dial.ouvert .dial-liste{display:flex}
+.dial-liste a{display:flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 6px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.22);animation:sortir .18s ease-out both}
+.dial-liste a:nth-child(4){animation-delay:.02s}.dial-liste a:nth-child(3){animation-delay:.05s}.dial-liste a:nth-child(2){animation-delay:.08s}.dial-liste a:nth-child(1){animation-delay:.11s}
+.dial-liste svg{flex:none;width:36px;height:36px;padding:8px;border-radius:50%;background:linear-gradient(135deg,#06323f,#087f8c);fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+body.reflexe .dial-liste svg{background:linear-gradient(135deg,#8a3b00,#d9690f)}
+.dial-liste a.on{border-color:var(--hi);box-shadow:0 0 0 2px var(--hi),0 6px 18px rgba(0,0,0,.22)}
+@keyframes sortir{from{opacity:0;transform:translateY(14px) scale(.92)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.dial-liste a{animation:none}.dial-btn .plus{transition:none}}
+
