@@ -1,2 +1,0 @@
-# DicMed
-Dictionnaire Medical

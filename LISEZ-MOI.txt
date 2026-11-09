@@ -1,0 +1,10 @@
+DicMed — paquet complet du site (5 novembre 2026)
+
+Décompressez ce dossier et copiez TOUT son contenu à la racine de votre projet DicMed (en conservant les dossiers),
+en remplaçant les fichiers existants. Puis : commit + push.
+
+  index.html          <- la page du SITE (jamais celle du dossier admin)
+  admin/index.html    <- redirection vers la connexion admin (reste dans admin/)
+
+NE SUPPRIMEZ PAS votre fichier supabase-config.js (il n'est pas dans ce paquet : il contient votre configuration).
+Supprimez de la racine, s'ils y sont encore : espace-admin.html, espace-admin.css, espace-admin.js.
