@@ -14,7 +14,7 @@ function compterVue(f) {
   try { if (sessionStorage.getItem("dicmed_vu_" + f.id)) return; sessionStorage.setItem("dicmed_vu_" + f.id, "1"); } catch {}
   try { dicmedSupabase.from("vues_fiches").insert({fiche_id: f.id, terme: f.terme}).then(() => {}, () => {}); } catch {}
 }
-const VERSION = "20261105c";
+const VERSION = "20261105d";
 const $ = s => document.querySelector(s);
 const norm = s => String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/œ/gi, "oe").replace(/[’']/g, " ").toLowerCase().trim();
 const store = {
@@ -318,3 +318,14 @@ charger()
         : "Vérifiez que le fichier data/termes.json existe à côté de index.html."),
       h("pre", {class: "empty"}, String(err.message)));
   });
+
+// Accès discret à l'administration : 5 appuis rapides sur le mot « DicMed » du pied de page (ou l'adresse admin/ enregistrée en favori)
+(function () {
+  const cible = document.getElementById("pied-admin");
+  if (!cible) return;
+  let n = 0, dernier = 0;
+  cible.addEventListener("click", () => {
+    const t = Date.now(); n = t - dernier < 1200 ? n + 1 : 1; dernier = t;
+    if (n >= 5) location.href = "admin/espace-admin.html";
+  });
+})();
