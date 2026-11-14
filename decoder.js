@@ -263,7 +263,7 @@ function listerRacines() {
 listerRacines();
 
 // ---------------------------------------------------------------- navigation Dictionnaire / Décoder / Bio
-const VUES = {dico: ["#vue-dico", "#n-dico"], decoder: ["#vue-decoder", "#n-dec"], bio: ["#vue-bio", "#n-bio"], reflexe: ["#vue-reflexe", "#n-reflexe"]};
+const VUES = {dico: ["#vue-dico", "#n-dico"], decoder: ["#vue-decoder", "#n-dec"], calc: ["#vue-calc", "#n-calc"], bio: ["#vue-bio", "#n-bio"], reflexe: ["#vue-reflexe", "#n-reflexe"]};
 let vueCourante = "dico";
 function vue(nom) {
   vueCourante = nom;

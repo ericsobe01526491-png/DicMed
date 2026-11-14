@@ -2,7 +2,7 @@
 // Service worker DicMed : permet d'utiliser le dictionnaire sans connexion.
 // Stratégie : le RÉSEAU D'ABORD (toujours la dernière version quand on est en ligne), le cache seulement hors connexion.
 const CACHE = "dicmed-v3";
-const FICHIERS = ["./", "index.html", "style.css", "app.js", "decoder.js", "bio.js", "pwa.js", "manifest.webmanifest",
+const FICHIERS = ["./", "index.html", "style.css", "app.js", "decoder.js", "bio.js", "calculateurs.js", "pwa.js", "manifest.webmanifest",
                   "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "data/termes.json", "data/bio.json"];
 
 self.addEventListener("install", e => e.waitUntil(

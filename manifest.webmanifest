@@ -6,27 +6,107 @@
   "start_url": "./?source=app",
   "scope": "./",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "any",
   "dir": "ltr",
   "lang": "fr",
   "background_color": "#06323f",
   "theme_color": "#075e65",
-  "categories": ["medical", "education", "health"],
+  "categories": [
+    "medical",
+    "education",
+    "health"
+  ],
   "prefer_related_applications": false,
   "icons": [
-    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ],
   "screenshots": [
-    {"src": "captures/ecran-accueil.jpg", "sizes": "540x960", "type": "image/jpeg", "form_factor": "narrow", "label": "Recherche dans le dictionnaire"},
-    {"src": "captures/ecran-fiche.jpg", "sizes": "540x960", "type": "image/jpeg", "form_factor": "narrow", "label": "Fiche d'un terme avec rubriques déroulantes"},
-    {"src": "captures/ecran-decoder.jpg", "sizes": "540x960", "type": "image/jpeg", "form_factor": "narrow", "label": "Décoder un mot médical"},
-    {"src": "captures/ecran-ordinateur.jpg", "sizes": "1280x720", "type": "image/jpeg", "form_factor": "wide", "label": "Le dictionnaire sur ordinateur"}
+    {
+      "src": "captures/ecran-accueil.jpg",
+      "sizes": "540x960",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Recherche dans le dictionnaire"
+    },
+    {
+      "src": "captures/ecran-fiche.jpg",
+      "sizes": "540x960",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Fiche d'un terme avec rubriques déroulantes"
+    },
+    {
+      "src": "captures/ecran-decoder.jpg",
+      "sizes": "540x960",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Décoder un mot médical"
+    },
+    {
+      "src": "captures/ecran-ordinateur.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Le dictionnaire sur ordinateur"
+    }
   ],
   "shortcuts": [
-    {"name": "Décoder un mot", "short_name": "Décoder", "url": "./#decoder", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"}]},
-    {"name": "Réflexe naturel", "short_name": "Réflexes", "url": "./#reflexe", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"}]}
+    {
+      "name": "Décoder un mot",
+      "short_name": "Décoder",
+      "url": "./#decoder",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Calculateurs médicaux",
+      "short_name": "Calculateurs",
+      "url": "./#calc",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Réflexe naturel",
+      "short_name": "Réflexes",
+      "url": "./#reflexe",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
   ]
 }

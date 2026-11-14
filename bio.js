@@ -1,24 +1,39 @@
 "use strict";
-// Rubrique « Bio » : lit data/bio.json {"fiches": [...]}.
-// Tant que « fiches » est vide, un message « en préparation » s'affiche.
-// Champs d'une fiche : nom (obligatoire), description, usages (liste), precautions, sources (liste).
-const BIO_CHAMPS = [["usages", "Usages"], ["precautions", "Précautions"], ["sources", "Sources"]];
-const RUBRIQUES = [["data/bio.json", "#bio-liste"]];
-function carteBio(f) {
-  const bloc = (titre, v) => h("section", {}, h("h4", {}, titre),
-    Array.isArray(v) ? h("ul", {}, v.map(x => h("li", {}, x))) : h("p", {}, v));
-  return h("details", {class: "bio-fiche"},
-    h("summary", {}, h("strong", {}, f.nom), f.description && h("span", {class: "snip"}, f.description)),
-    BIO_CHAMPS.filter(([k]) => f[k] && f[k].length).map(([k, t]) => bloc(t, f[k])));
+// Rubrique « Bio » (fruits, légumes, plantes) : lit data/bio.json, avec recherche et filtre par catégorie.
+// La fiche s'ouvre dans la même fenêtre que celles du dictionnaire. Utilise $, h, norm, byId, view, openFiche et VERSION de app.js.
+let bioListe = [], bioCat = "Toutes", bioQuery = "", bioMontre = 60;
+function bioInit() {
+  const zone = $("#bio-liste");
+  const champ = h("input", {type: "search", class: "bio-q", placeholder: "Rechercher un fruit, un légume…", "aria-label": "Rechercher dans Bio"});
+  const chips = h("div", {class: "chips"}), liste = h("div", {class: "grid"});
+  const plus = h("button", {type: "button", class: "btn more", hidden: true}, "Afficher plus");
+  const maj = () => {
+    const q = norm(bioQuery), cats = ["Toutes", ...new Set(bioListe.map(f => f.categorie))];
+    chips.replaceChildren(...cats.map(c => h("button", {type: "button", class: "chip" + (bioCat === c ? " on" : ""), onclick: () => { bioCat = c; bioMontre = 60; maj(); }},
+      c + " ", h("small", {class: "stat"}, String(c === "Toutes" ? bioListe.length : bioListe.filter(f => f.categorie === c).length)))));
+    const l = bioListe.filter(f => (bioCat === "Toutes" || f.categorie === bioCat) && (!q || f.n.includes(q)));
+    liste.replaceChildren(...(l.length ? l.slice(0, bioMontre).map(f => h("button", {class: "card", type: "button", onclick: () => { view = l; openFiche(f.id); }},
+      h("span", {class: "badge t-bio"}, f.categorie), h("strong", {}, f.terme), h("span", {class: "snip"}, f.latin || f.resume || ""))) : [h("p", {class: "empty"}, "Aucun résultat.")]));
+    plus.hidden = l.length <= bioMontre;
+  };
+  champ.oninput = () => { bioQuery = champ.value; bioMontre = 60; maj(); };
+  plus.onclick = () => { bioMontre += 60; maj(); };
+  zone.replaceChildren(champ, chips, liste, plus);
+  maj();
 }
-RUBRIQUES.forEach(([fichier, zone]) => fetch(fichier + "?v=" + VERSION)
+fetch("data/bio.json?v=" + VERSION)
   .then(r => r.ok ? r.json() : {fiches: []})
   .catch(() => ({fiches: []}))
   .then(d => {
-    const liste = (d.fiches || []).filter(f => f && f.nom);
-    $(zone).replaceChildren(...(liste.length ? liste.map(carteBio)
-      : [h("p", {class: "vide"}, "Cette rubrique est en préparation. Les premiers contenus seront publiés prochainement.")]));
-  }));
+    bioListe = (d.fiches || []).filter(f => f && (f.terme || f.nom)).map(f => {
+      f.terme = f.terme || f.nom; f.type = "bio"; f.categorie = f.categorie || "Bio";
+      f.id = f.id || "bio-" + norm(f.terme).replace(/[^a-z0-9]+/g, "-");
+      f.n = norm([f.terme, f.latin, ...(f.synonymes || [])].filter(Boolean).join(" "));
+      byId.set(f.id, f); return f;
+    });
+    if (bioListe.length) bioInit();
+    else $("#bio-liste").replaceChildren(h("p", {class: "vide"}, "Cette rubrique est en préparation. Les premiers contenus seront publiés prochainement."));
+  });
 
 // Rubrique « Réflexe naturel » : les fiches du dictionnaire de type « reflexe », regroupées par partie puis par groupe (déroulants)
 function afficherReflexes() {
